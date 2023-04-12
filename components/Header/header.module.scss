@@ -2,19 +2,21 @@
 @use "../../assets/styles/partials/mixins/devices" as devices;
 @use "../../assets/styles/partials/variables/colors" as colors;
 
-.navigation {
+.header {
   position: fixed;
   width: 100%;
   z-index: 900;
+  background-color: white;
 
-  &_content {
+  &_top {
     @extend %mainLayout;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    &__top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  &_bottom {
+    background-color: colors.$palette2;
   }
 
   img {
@@ -23,21 +25,21 @@
 }
 
 .pc {
-  .navigation_logo {
-      padding-left: 1rem;
-      
+  .header_logo {
+    padding-left: 1rem;
+
     @include devices.device(xlgScreen) {
       padding-left: 0rem;
     }
   }
-  .navigation_content {
-    display: flex;
-    justify-content: space-between;
+  .header_content {
+    // display: flex;
+    // justify-content: space-between;
     padding-top: 2rem;
 
     &__scrolled {
-      padding-top: .6rem;
-      padding-bottom: .6rem;
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
 
       img {
         width: 80%;
@@ -45,9 +47,11 @@
     }
   }
 
-
   .menu {
     padding-right: 1rem;
+    @extend %mainLayout;
+
+
     ul {
       display: flex;
       align-items: center;
@@ -70,55 +74,39 @@
         &:hover {
           color: colors.$palette2;
         }
-
-        &.contact {
-          background-color: colors.$palette4;
-          border-radius: 50px;
-          text-align: center;
-          color: white;
-          padding: 1rem 3rem;
-          position: relative;
-          overflow: hidden;
-
-
-          span {
-            position: relative;
-            z-index: 100;
-          }
-           &::after {
-            content: '';
-            background-color: colors.$palette2;
-            width: 100px;
-            height: 100px;
-            display: block;
-            position: absolute;
-            top: -35%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            z-index: 0;
-            border-radius: 100%;
-            transform: scale(0);
-            transition: all .2s ease-in-out;
-            transform-origin: center;
-           }
-
-           &:hover::after {
-            transform: scale(2);
-            transition: all .2s ease-in-out;
-           }
-        }
       }
     }
   }
 }
 
-
-
 .mobile {
   background-color: white !important;
 
-  .navigation_logo {
+  .submenu {
+    background-color: colors.$palette2;
+
+    ul {
+      display: flex;
+      color: colors.$main;
+      padding: .8rem;
+
+      li {
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 50%;
+        span {
+          color: colors.$palette1;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .phone,.rating {
+    display: none;
+  }
+
+  .header_logo {
     max-width: 40px;
     img {
       width: 100%;
@@ -131,7 +119,7 @@
       width: 0vw;
       top: 0%;
       left: 0;
-      z-index: -1;
+      z-index: 999;
       background-color: white;
       display: flex;
       flex-direction: column;

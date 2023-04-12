@@ -1,9 +1,9 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import TextApp from '../TextApp'
 import style from './button-app.module.scss'
 
 interface ButtonAppProps {
-  labelID?: string,
+  labelID: string,
   onClick: Function,
 }
 
@@ -17,7 +17,7 @@ const ButtonApp = ({labelID, onClick}: ButtonAppProps) => {
   return (
     <button className={style.button} onClick={() => { onClick() }}>
       <span>
-        <FormattedMessage id={labelID} />
+        <TextApp labelID={labelID} />
       </span>
     </button>
   )

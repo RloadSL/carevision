@@ -2,6 +2,7 @@ import Link from "next/link";
 import style from "./header.module.scss";
 import Image from "next/image";
 import logo from "../../assets/img/logo.svg";
+import stars from "../../assets/img/stars.svg";
 import logoMobile from "../../assets/img/logo.svg";
 // import useComponentUtils from "@/hooks/component.hooks";
 // import useComponentAnimations from "@/hooks/animations.hooks";
@@ -9,11 +10,14 @@ import { useEffect, useState } from "react";
 import HamburguerButton from "./HamburguerButton";
 import useComponentUtils from "@/hooks/component.hooks";
 import useComponentAnimations from "@/hooks/animations.hooks";
+import menuData from "../../data/menu.json";
+import ButtonApp from "../ButtonApp";
+import TextApp from "../TextApp";
 // import gsap, { Power2 } from "gsap";
 
 /**
  * Component that includes the header with the menu
- * @returns 
+ * @returns
  */
 
 const Header = () => {
@@ -27,9 +31,6 @@ const Header = () => {
   //checking mobile menu
   const isMobile = useWindowSize().width <= 768 ? true : false;
 
-  //adding the formatted label Array for the top menu translation JSON
-  const menuLabelIDs: Array<string> = ["services", "why-us", "about", "contact"];
-
   const [scroll, setScroll] = useState<boolean>(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -39,42 +40,61 @@ const Header = () => {
 
   return (
     <div
-      className={`${style.navigation} ${style[isMobile ? "mobile" : "pc"]} navigation `}
+      className={`${style.header} ${style[isMobile ? "mobile" : "pc"]} navigation`}
       style={
-        useScrollDistance() >= 100
-          ? { backgroundColor: "white" }
-          : { backgroundColor: "transparent" }
+        useScrollDistance() >= 100 ? { backgroundColor: "white" } : { backgroundColor: "white" }
       }
     >
-      <header
-        className={`${style.navigation_content} ${
-          scroll ? style.navigation_content__scrolled : ""
-        }`}
-      >
-        <div className={style.navigation_content__top}>
-          <Link href={"/"}>
-            <div className={`${style.navigation_logo} logo`}>
+      <header className={`${scroll ? style.header_content__scrolled : ""}`}>
+        <div className={style.header_top}>
+          <div className={`${style.header_logo} logo`}>
+            <Link href={"/"}>
               <Image src={isMobile ? logoMobile : logo} alt={"Definitio logo"} />
-            </div>
-          </Link>
+            </Link>
+          </div>
+          <div className={style.rating}>
+            <Image src={stars} alt={"5 stars rating "} />
+          </div>
+          <div className={style.phone}>
+            <TextApp labelID="phoneNumber.button.label" />
+          </div>
+          <div>
+            <ButtonApp labelID="onlineDate.button.label" onClick={() => console.log("hola")} />
+          </div>
+
           {isMobile && <HamburguerButton onClick={toggleMobileNav} />}
         </div>
-
-        <nav className={style.menu}>
-          <ul className="ul-menu">
-            {menuLabelIDs.map((item, index: number) => {
-              return (
-                <li className={`${style.navigation_menu__item} li-menu`} key={index}>
-                  <Link href={`/${item}`} className={style[item]} onClick={toggleMobileNav}>
-                    <span>
-                      menu
-                    </span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+        <div className={style.header_bottom}>
+          <nav className={style.menu}>
+            <ul className="ul-menu">
+              {menuData.map((item, index: number) => {
+                return (
+                  <li className={`${style.header_menu__item} li-menu`} key={index}>
+                    <Link href={`/${item}`} onClick={toggleMobileNav}>
+                      <span>{item}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </div>
+        {isMobile && (
+          <div className={style.submenu}>
+            <ul>
+              <li>
+                <div>
+                  <TextApp labelID="customerService.submenu.label" />
+                </div>
+              </li>
+              <li>
+                <div>
+                  <TextApp labelID="emailContact.submenu.label" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        )}
       </header>
     </div>
   );

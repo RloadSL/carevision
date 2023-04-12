@@ -33,8 +33,13 @@ $headings: h1 h2 h3 h4 h5 h6;
 p {
 	font-size: 1.3rem;
 	line-height: 2rem;
-	color: black;
 }
+
+p,
+span {
+	color: colors.$main;
+}
+
 
 img {
 	width: 100%;
@@ -48,6 +53,10 @@ canvas {
 
 .hidden {
 	display: none;
+}
+
+.flex {
+	display: flex;
 }
 
 .author {
@@ -173,4 +182,3 @@ canvas {
 .menu-options-btn:active {
 	box-shadow: none;
 }
-
