@@ -1,0 +1,98 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+@include layout.float;
+
+.about {
+  background: url(../../assets/img/about/about_bg.png) no-repeat;
+  background-size: cover;
+  position: relative;
+
+  h1 {
+    @extend %mainTitle;
+    font-size: clamp(4.5vw, 13vw, 4.5rem);
+    line-height: 1rem;
+  }
+  .content {
+    @extend %maxContent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    padding-top: 10rem;
+    background: url(../../assets/img/cube_bg.svg) no-repeat;
+    background-position: 95% 90%;
+
+    @include devices.device(tablet) {
+      padding-top: 15rem;
+    }
+
+    @include devices.device(smScreen) {
+      text-align: left;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  &_info {
+    margin-bottom: 10rem;
+
+    @include devices.device(smScreen) {
+      padding-left: 3rem;
+      padding-top: 0;
+      width: 50%;
+    }
+
+    p {
+      @include devices.device(smScreen) {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        max-width: 600px;
+      }
+
+      @include devices.device(xlgScreen) {
+        max-width: 650px;
+      }
+    }
+  }
+
+  &_decoration {
+
+    @include devices.device(tablet) {
+      width: 80%;
+      margin: auto;
+    }
+    @include devices.device(smScreen) {
+      width: 45%;
+      margin-top: 0px;
+    }
+
+    @include devices.device(xlgScreen) {
+      width: 40%;
+    }
+  }
+
+  &_slider {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-image: url(../../assets/img/about/slider_bg.png);
+  }
+}
+
+.cube1 {
+  position: absolute;
+  right: 20%;
+  top: 10%;
+  animation: float 5.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+  transform: rotate(30deg);
+}
+
+.cube2 {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+  transform: rotate(60deg);
+}

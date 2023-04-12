@@ -1,0 +1,42 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+%containerSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.home {
+  position: relative;
+  background-color: grey;
+  padding-top: 20rem;
+
+  section {
+    p {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  section,
+  main {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+
+      @include devices.device(smScreen) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    @include devices.device(tablet) {
+      min-height: 100vh;
+    }
+  }
+}

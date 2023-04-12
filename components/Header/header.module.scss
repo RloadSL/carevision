@@ -1,0 +1,152 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  z-index: 900;
+
+  &_content {
+    @extend %mainLayout;
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  img {
+    width: auto;
+  }
+}
+
+.pc {
+  .navigation_logo {
+      padding-left: 1rem;
+      
+    @include devices.device(xlgScreen) {
+      padding-left: 0rem;
+    }
+  }
+  .navigation_content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+
+    &__scrolled {
+      padding-top: .6rem;
+      padding-bottom: .6rem;
+
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+
+  .menu {
+    padding-right: 1rem;
+    ul {
+      display: flex;
+      align-items: center;
+      height: auto !important;
+
+      li {
+        padding-right: 2rem;
+        opacity: 1 !important;
+        transform: none !important;
+
+        &:last-child {
+          padding: 0px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        // padding: 1rem;
+
+        &:hover {
+          color: colors.$palette2;
+        }
+
+        &.contact {
+          background-color: colors.$palette4;
+          border-radius: 50px;
+          text-align: center;
+          color: white;
+          padding: 1rem 3rem;
+          position: relative;
+          overflow: hidden;
+
+
+          span {
+            position: relative;
+            z-index: 100;
+          }
+           &::after {
+            content: '';
+            background-color: colors.$palette2;
+            width: 100px;
+            height: 100px;
+            display: block;
+            position: absolute;
+            top: -35%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 0;
+            border-radius: 100%;
+            transform: scale(0);
+            transition: all .2s ease-in-out;
+            transform-origin: center;
+           }
+
+           &:hover::after {
+            transform: scale(2);
+            transition: all .2s ease-in-out;
+           }
+        }
+      }
+    }
+  }
+}
+
+
+
+.mobile {
+  background-color: white !important;
+
+  .navigation_logo {
+    max-width: 40px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    ul {
+      position: absolute;
+      width: 0vw;
+      top: 0%;
+      left: 0;
+      z-index: -1;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // opacity: 0;
+      height: 100vh;
+      overflow: hidden;
+
+      li {
+        margin: 1rem 0;
+        font-size: 3rem;
+        color: colors.$main;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use "../../../assets/styles/partials/placeholders" as placeholders;
+@use "../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../assets/styles/partials/variables/colors" as colors;
+
+.wrapper {
+  position: relative;
+  width: 95%;
+  height: auto;
+
+  @include devices.device(tablet) {
+    width: 100%;
+  }
+
+  & > div {
+    position: absolute;
+  }
+}
+
+.blueSpot {
+  width: 12%;
+  left: 0%;
+  top: 10%;
+}
+
+.yellowSpot {
+  width: 15%;
+  right: -4%;
+  bottom: 25%;
+}
+
+.boyGirl {
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+  z-index: 100;
+}
+
+.city {
+  width: 40%;
+  left: 15%;
+  top: -10%;
+}
+
+.window {
+  width: 25%;
+  right: 0%;
+  top: 38%;
+}
+
+.mobile {
+  width: 32%;
+  right: 8%;
+  bottom: 10%;
+}

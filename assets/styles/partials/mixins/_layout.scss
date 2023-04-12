@@ -1,0 +1,73 @@
+@use "../../partials/variables/colors" as colors;
+@use "./devices" as devices;
+@use "../placeholders";
+
+@mixin mainContent {
+	width: 100%;
+  margin: auto;
+	padding: 0 1rem;
+
+	@include devices.device(700px) {
+		padding: 0 6rem;
+	}
+
+	@include devices.device(smScreen) {
+		padding: 0 4rem;
+	}
+
+	@include devices.device(lgScreen) {
+		padding: 0 4rem;
+		max-width:  1600px
+	}
+}
+
+@mixin mainTitle {
+	@extend %mainTitle;
+	font-size: 3rem;
+	line-height: 3.5rem;
+
+	@include devices.device(tablet) {
+		font-size: 4rem;
+		line-height: 4.2rem;
+	}
+
+	@include devices.device(smScreen) {
+		font-size: 5rem;
+		line-height: 5rem;
+	}
+
+	// @include devices.device(lgScreen) {
+	// 	font-size: 6rem;
+	// 	line-height: 6rem;
+	// }
+
+	@include devices.device(xlgScreen) {
+		font-size: 6rem;
+		line-height: 6rem;
+	}
+}
+
+@mixin rotateAnimation {
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin float {
+	@keyframes float {
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: translatey(-50px) rotate(30deg);
+		}
+		100% {
+			transform: translatey(0px);
+		}
+	}
+}

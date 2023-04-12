@@ -1,0 +1,110 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.footer {
+  padding-bottom: 2rem;
+
+  a {
+    &:hover {
+      color: colors.$palette4
+    }
+  }
+
+  &_content {
+    @extend %mainLayout;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    ul {
+      @include devices.device(tablet) {
+        display: flex;
+      }
+
+      li {
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include devices.device(smScreen) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: .8rem;
+      margin-top: 2rem;
+
+      @include devices.device(tablet) {
+        flex-direction: row;
+      }
+    }
+  }
+
+&_rload {
+  font-size: .8rem;
+  order: 2;
+  margin-top: 20px;
+
+
+  @include devices.device(smScreen) {
+    margin-left: 10rem;
+    order: initial;
+
+  }
+}
+
+  &_logo {
+    max-width: 100px;
+    filter: brightness(200);
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+
+    @include devices.device(tablet) {
+      max-width: 200px;
+    }
+  }
+
+  &_social {
+    font-size: 1.2rem;
+    text-align: center;
+    ul {
+      @include devices.device(tablet) {
+        display: flex;
+      }
+    }
+
+
+    li {
+      @include devices.device(tablet) {
+        margin-left: 3rem;
+      }
+    }
+  }
+
+  &_legal {
+    text-align: center;
+    li {
+      @include devices.device(tablet) {
+        margin-left: 3rem;
+      }
+    }
+  }
+
+}

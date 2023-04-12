@@ -1,0 +1,64 @@
+@use "./variables/colors" as colors;
+@use "./mixins/devices" as devices;
+
+%mainLayout {
+  max-width: 1800px;
+  width: 100%;
+  margin: auto;
+  font-size: 1rem;
+  padding: 0.8rem;
+}
+
+%mainTitle {
+  color: colors.$main;
+  margin-top: 0px;
+  font-weight: 600;
+}
+
+%titleButton {
+  color: colors.$palette2;
+  font-size: 1.2rem;
+  margin: 0px auto 2rem auto;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 1px solid colors.$palette2;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+  border-radius: 50px;
+  width: fit-content;
+
+  @include devices.device(600px) {
+    padding: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  @include devices.device(smScreen) {
+    margin: 0;
+    margin: 0px 0px 2rem 0px;
+  }
+}
+
+%maxContent {
+  width: 100%;
+
+  @include devices.device(tablet) {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  @include devices.device(smScreen) {
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include devices.device(xlgScreen) {
+    max-width: 1800px;
+    margin: auto;
+    width: 90%;
+  }
+}
