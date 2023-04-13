@@ -15,6 +15,13 @@
   font-weight: 600;
 }
 
+%beforeAfter {
+  content: '';
+  display: block;
+  min-width: 20px;
+  height: 20px;
+}
+
 %titleButton {
   color: colors.$palette2;
   font-size: 1.2rem;

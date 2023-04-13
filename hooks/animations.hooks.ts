@@ -25,12 +25,18 @@ const useComponentAnimations = () => {
   };
 
   const mobileNavAnimation = () => {
-    tlMobile.to(".ul-menu", {
+    tlMobile.to(".overlay", {
+      opacity: 1,
+      display: "block",
+      duration: .1,
+    });
+    tlMobile.to(".sidemenu", {
       duration: .3,
       opacity: 1,
       width: "90vw", // change this to 100vh for full-height menu
       ease: Power2.easeOut,
     });
+    
     // tlMobile.from(
     //   ".li-menu",
     //   {

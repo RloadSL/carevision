@@ -1,0 +1,153 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+%itemContent {
+  @extend %beforeAfter;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+
+  @include devices.device(smScreen) {
+    margin-right: 0px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+
+  @include devices.device(mdScreen) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.iconsSection {
+  @extend %mainLayout;
+
+  &_top {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .title {
+      color: colors.$main;
+      font-weight: bold;
+      font-size: 1.8rem;
+
+      span {
+        color: colors.$palette1;
+      }
+    }
+  }
+
+  &_bottom {
+    ul {
+      @include devices.device(smScreen) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      li {
+        margin-bottom: 15px;
+
+        @include devices.device(tablet) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+.option1 {
+  .itemBlock {
+    &_content {
+      &::before {
+        background: url(../../assets/img/icons_section/eye_item.svg);
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.option2 {
+  .itemBlock {
+    &_content {
+      &::before {
+        background: url(../../assets/img/icons_section/medal_item.svg);
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.option3 {
+  .itemBlock {
+    &_content {
+      &::before {
+        background: url(../../assets/img/icons_section/map_item.svg);
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.option4 {
+  .itemBlock {
+    &_content {
+      &::before {
+        background: url(../../assets/img/icons_section/champion_item.svg);
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.option5 {
+  .itemBlock {
+    &_content {
+      &::before {
+        background: url(../../assets/img/icons_section/cross_item.svg);
+        background-size: contain;
+      }
+    }
+  }
+}
+
+//IconBlock Component
+.itemBlock {
+  -webkit-box-shadow: 2px -1px 37px -7px rgba(205, 236, 246, 0.8);
+  -moz-box-shadow: 2px -1px 37px -7px rgba(205, 236, 246, 0.8);
+  box-shadow: 2px -1px 37px -7px rgba(205, 236, 246, 0.8);
+  border-radius: 18px;
+  padding: 1rem;
+  max-width: 600px;
+  margin: auto;
+
+  @include devices.device(smScreen) {
+    box-shadow: none;
+  }
+
+  &_content {
+    display: flex;
+    align-items: center;
+
+    @include devices.device(smScreen) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &::before {
+      @extend %itemContent;
+    }
+
+    span {
+      display: block;
+      font-size: 1.2rem;
+
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+}

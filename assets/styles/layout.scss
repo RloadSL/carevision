@@ -13,11 +13,11 @@ $themeFont: "Lato";
 html {
 	font-size: 14px;
 
-	// @include devices.device(lgScreen) {
-	// 	font-size: 14px;
-	// }
+	@include devices.device(smScreen) {
+		font-size: 16px;
+	}
 
-	@include devices.device(lgScreen) {
+	@include devices.device(mdScreen) {
 		font-size: 18px;
 	}
 }
@@ -31,8 +31,8 @@ $headings: h1 h2 h3 h4 h5 h6;
 }
 
 p {
-	font-size: 1.3rem;
-	line-height: 2rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 p,

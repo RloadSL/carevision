@@ -1,10 +1,20 @@
 {
-  "onlineDate.button.label": "Termin vereinbaren",
+  "onlineDate.button.label": "Online Termin",
   "contact.button.label": "Contact",
   "phoneNumber.button.label": "0800 8888 474",
+  "loginNow.button.label": "Jetzt anmelden",
 
   "customerService.submenu.label":"<span>Kostenfreie</span> Servicenummer",
-  "emailContact.submenu.label":"<span>Infos</span> anfordern"
+  "emailContact.submenu.label":"<span>Infos</span> anfordern",
 
+  "iconsSection.title":"<span>Gute Gründe für</span> CARE Vision",
+  "iconsSection.text":"Aante ultrices, posuere lorem et, fringilla libero. Suspendisse ultricies scelerisque libero at malesuada. Etiam venenatis dolor non nisl aliquam mattis. Proin fermentum efficitur justo, ut fringilla mauris imperdiet sed. Mauris ante diam, bibendum et molestie et, dictum non ante dictum non ante.",
+  "iconsSection.option1.title":"CARE Vision",
+  "iconsSection.option2.title":"CARE Vision",
+  "iconsSection.option3.title":"CARE Vision",
+  "iconsSection.option4.title":"CARE Vision",
+  "iconsSection.option5.title":"CARE Vision",
+
+  "home.information.text":"<span>Online Infoabend  -</span> Augenlasern"
 }
 

@@ -7,12 +7,12 @@ import logoMobile from "../../assets/img/logo.svg";
 // import useComponentUtils from "@/hooks/component.hooks";
 // import useComponentAnimations from "@/hooks/animations.hooks";
 import { useEffect, useState } from "react";
-import HamburguerButton from "./HamburguerButton";
 import useComponentUtils from "@/hooks/component.hooks";
 import useComponentAnimations from "@/hooks/animations.hooks";
 import menuData from "../../data/menu.json";
 import ButtonApp from "../ButtonApp";
 import TextApp from "../TextApp";
+import calendarIcon from '../../assets/img/calendar.svg'
 // import gsap, { Power2 } from "gsap";
 
 /**
@@ -59,14 +59,23 @@ const Header = () => {
             <TextApp labelID="phoneNumber.button.label" />
           </div>
           <div>
-            <ButtonApp labelID="onlineDate.button.label" onClick={() => console.log("hola")} />
+            <ButtonApp icon={calendarIcon} labelID="onlineDate.button.label" onClick={() => console.log("hola")} />
           </div>
 
-          {isMobile && <HamburguerButton onClick={toggleMobileNav} />}
+          {isMobile && (
+            <button className={style.mobileButton} onClick={toggleMobileNav}>
+              <span className="only-readers">menu</span>
+            </button>
+          )}
         </div>
         <div className={style.header_bottom}>
-          <nav className={style.menu}>
-            <ul className="ul-menu">
+          <nav className={`${style.menu} sidemenu`}>
+          {isMobile && (
+            <button className={style.closeButton} onClick={toggleMobileNav}>
+              <span className="only-readers">menu</span>
+            </button>
+          )}
+            <ul>
               {menuData.map((item, index: number) => {
                 return (
                   <li className={`${style.header_menu__item} li-menu`} key={index}>
@@ -78,6 +87,7 @@ const Header = () => {
               })}
             </ul>
           </nav>
+          <div className={`${style.overlay} overlay`} aria-hidden={true}></div>
         </div>
         {isMobile && (
           <div className={style.submenu}>

@@ -165,6 +165,10 @@
       margin-top: 3rem;
       display: flex;
       justify-content: space-between;
+
+      @include devices.device(smScreen) {
+        margin-top: 0;
+      }
     }
 
     li {

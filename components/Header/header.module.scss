@@ -2,6 +2,14 @@
 @use "../../assets/styles/partials/mixins/devices" as devices;
 @use "../../assets/styles/partials/variables/colors" as colors;
 
+%submenuIcon {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -13,28 +21,75 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+
+    @include devices.device(tablet) {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+    }
   }
 
   &_bottom {
     background-color: colors.$palette2;
+    position: relative;
   }
 
   img {
     width: auto;
+  }
+
+  .mobileButton,
+  .closeButton {
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+  }
+
+  .mobileButton {
+    background: url(../../assets/img/hamburguer.svg) no-repeat;
+    background-position: right center;
+    margin-right: 0;
+  }
+
+  .closeButton {
+    background: url(../../assets/img/close.svg) no-repeat;
+    position: absolute;
+    right: 10px;
+  }
+
+  .phone {
+    display: flex;
+    align-items: center;
+    color: colors.$main;
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 25px;
+      background: url(../../assets/img/contact_b.svg) no-repeat;
+      background-size: contain;
+      margin-right: 10px;
+    }
   }
 }
 
 .pc {
   .header_logo {
     padding-left: 1rem;
+    width: 180px;
+
+    img {
+      width: 100%;
+    }
 
     @include devices.device(xlgScreen) {
       padding-left: 0rem;
     }
   }
   .header_content {
-    // display: flex;
-    // justify-content: space-between;
     padding-top: 2rem;
 
     &__scrolled {
@@ -48,19 +103,22 @@
   }
 
   .menu {
-    padding-right: 1rem;
     @extend %mainLayout;
-
+    padding-right: 1rem;
 
     ul {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       height: auto !important;
+      padding: 0.2rem;
+      width: 100%;
 
       li {
         padding-right: 2rem;
         opacity: 1 !important;
         transform: none !important;
+        font-size: 0.9rem;
 
         &:last-child {
           padding: 0px;
@@ -69,7 +127,6 @@
 
       a {
         display: inline-block;
-        // padding: 1rem;
 
         &:hover {
           color: colors.$palette2;
@@ -82,18 +139,60 @@
 .mobile {
   background-color: white !important;
 
+  .header_logo {
+    width: 180px;
+  }
+
+  .overlay {
+    background: rgba($color: #000000, $alpha: 0.5);
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    top: -85px;
+    left: 0px;
+    display: none;
+    opacity: 0;
+  }
+
   .submenu {
     background-color: colors.$palette2;
 
     ul {
       display: flex;
       color: colors.$main;
-      padding: .8rem;
+      padding: 0.4rem;
 
       li {
         font-size: 1.2rem;
         font-weight: bold;
         width: 50%;
+        display: flex;
+        align-items: center;
+        box-sizing: content-box;
+
+        &::before {
+          @extend %submenuIcon;
+        }
+
+        &:first-child {
+          border-right: 1px solid colors.$main;
+          padding-right: 0.8rem;
+
+          &::before {
+            background: url(../../assets/img/menu_call.svg) no-repeat;
+            background-size: contain;
+          }
+        }
+
+        &:last-child {
+          padding-left: 0.8rem;
+
+          &::before {
+            background: url(../../assets/img/menu_mail.svg) no-repeat;
+            background-size: contain;
+          }
+        }
+
         span {
           color: colors.$palette1;
           display: block;
@@ -102,30 +201,33 @@
     }
   }
 
-  .phone,.rating {
+  .phone,
+  .rating {
     display: none;
   }
 
   .header_logo {
-    max-width: 40px;
+    max-width: 120px;
     img {
       width: 100%;
     }
   }
 
   .menu {
+    width: 0vw;
+    overflow: hidden;
+    position: absolute;
+    top: -85px;
+    z-index: 999;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
     ul {
-      position: absolute;
-      width: 0vw;
-      top: 0%;
-      left: 0;
-      z-index: 999;
       background-color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      // opacity: 0;
       height: 100vh;
       overflow: hidden;
 
