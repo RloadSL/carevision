@@ -79,4 +79,8 @@
   //       min-height: 100vh;
   //     }
   //   }
+
+  &_tabs2 {
+    @extend %mainLayout;
+  }
 }

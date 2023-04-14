@@ -182,3 +182,12 @@ canvas {
 .menu-options-btn:active {
 	box-shadow: none;
 }
+
+.swiper-slide:not(.swiper-slide-active){
+  opacity: 0 !important;
+}
+
+.swiper-pagination-bullet {
+	background: red !important;
+	width: fit-content !important;
+}
