@@ -12,7 +12,7 @@ import useComponentAnimations from "@/hooks/animations.hooks";
 import menuData from "../../data/menu.json";
 import ButtonApp from "../ButtonApp";
 import TextApp from "../TextApp";
-import calendarIcon from '../../assets/img/calendar.svg'
+import calendarIcon from "../../assets/img/calendar.svg";
 // import gsap, { Power2 } from "gsap";
 
 /**
@@ -59,7 +59,12 @@ const Header = () => {
             <TextApp labelID="phoneNumber.button.label" />
           </div>
           <div>
-            <ButtonApp icon={calendarIcon} labelID="onlineDate.button.label" onClick={() => console.log("hola")} />
+            <ButtonApp
+              icon={calendarIcon}
+              iconAlign="left"
+              labelID="onlineDate.button.label"
+              onClick={() => console.log("hola")}
+            />
           </div>
 
           {isMobile && (
@@ -70,11 +75,11 @@ const Header = () => {
         </div>
         <div className={style.header_bottom}>
           <nav className={`${style.menu} sidemenu`}>
-          {isMobile && (
-            <button className={style.closeButton} onClick={toggleMobileNav}>
-              <span className="only-readers">menu</span>
-            </button>
-          )}
+            {isMobile && (
+              <button className={style.closeButton} onClick={toggleMobileNav}>
+                <span className="only-readers">menu</span>
+              </button>
+            )}
             <ul>
               {menuData.map((item, index: number) => {
                 return (

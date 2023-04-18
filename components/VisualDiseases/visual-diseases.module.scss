@@ -1,0 +1,63 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.content {
+  @extend %mainLayout;
+
+  &_top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @include devices.device(smScreen) {
+      flex-wrap: nowrap;
+    }
+
+    button {
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      border-radius: 100px;
+      width: fit-content;
+      min-width: 48%;
+      background-color: white;
+
+      @include devices.device(smScreen) {
+        min-width: 300px;
+      }
+    }
+  }
+
+  &_bottom {
+    @include devices.device(smScreen) {
+      display: flex;
+    }
+
+    &_text {
+      color: colors.$main;
+      margin-left: 2rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        &::before {
+          @extend %beforeAfter;
+          background: url(../../assets/img/check_list.svg) no-repeat;
+          background-size: contain;
+          flex-shrink: 0;
+          width: 40px;
+          height: 40px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  background-color: colors.$palette1 !important;
+  color: white !important;
+}

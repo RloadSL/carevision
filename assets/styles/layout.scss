@@ -1,8 +1,10 @@
-@forward "./reset";
 @use "./partials/variables/colors" as colors;
 @use "./partials/fonts";
 @use "./partials/mixins/devices" as devices;
 @use "./partials/placeholders" as placeholders;
+@forward "./reset";
+@forward "./slider";
+
 
 $themeFont: "Lato";
 
@@ -183,11 +185,4 @@ canvas {
 	box-shadow: none;
 }
 
-.swiper-slide:not(.swiper-slide-active){
-  opacity: 0 !important;
-}
 
-.swiper-pagination-bullet {
-	background: red !important;
-	width: fit-content !important;
-}

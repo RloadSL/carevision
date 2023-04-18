@@ -8,8 +8,10 @@ import TextApp from "@/components/TextApp";
 import ButtonApp from "@/components/ButtonApp";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { SwiperSlide } from "swiper/react";
-import RLDTabs from "@/components/RLDTabs";
-import VisualDiseasesTabs from "@/components/VisualDiseasesTabs/VisualDiseasesTabs";
+import VisualDiseases from "@/components/VisualDiseases";
+import Treatments from "@/components/Treatments";
+// import RLDTabs from "@/components/DD_RLDTabs";
+// import VisualDiseasesTabs from "@/components/DD-VisualDiseasesTabs/VisualDiseasesTabs";
 
 /**
  * Home page structure component. Includes the SEO header and each of the sections that build the UI of the page
@@ -21,8 +23,6 @@ const Home: NextPage = () => {
     alert("hola");
   };
 
-   
-
   return (
     <div className={style.home}>
       <SEOHead title="CareVision" description="Here the SEO description of the page" />
@@ -32,14 +32,12 @@ const Home: NextPage = () => {
           <IconsSection />
         </section>
         <section className={style.home_video}>video</section>
-        <section className={style.home_tabs}>
-   
-          tabs1
+        <section className={style.home_treatments}>
+          <Treatments/>
         </section>
         <section className={style.home_consultation}>consultation</section>
-        <section className={style.home_tabs2}>
-<VisualDiseasesTabs buttonLabels={["Ich bin kurzsichtig","Ich bin weitsichtig","Ich habe eine Hornhautverkrümmung","Ich trage eine Lesebrille"]}/>
-          {/* <BeforeAfterSlider /> */}
+        <section className={style.home_visualDiseases}>
+          <VisualDiseases />
         </section>
         <section className={style.home_doctor}>doctor</section>
         <section className={style.home_comments}>comments</section>

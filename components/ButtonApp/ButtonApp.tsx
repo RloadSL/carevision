@@ -7,18 +7,21 @@ interface ButtonAppProps {
   labelID: string;
   onClick: Function;
   icon?: string;
+  iconAlign?: "left" | "right";
 }
 
 /** Button component for web
  * @param labelID ID for JSON translations
  * @param onClick onClick function
  * @param icon Optional image for the icon of the button
+ * @param iconAlign left | right position of the icon with the button label
  * @returns
  */
 
-const ButtonApp = ({ labelID, onClick, icon }: ButtonAppProps) => {
+const ButtonApp = ({ labelID, onClick, icon, iconAlign = "right" }: ButtonAppProps) => {
   return (
     <button
+      style={iconAlign !== "right" ? { flexDirection: "row" } : { flexDirection: "row-reverse" }}
       className={style.button}
       onClick={() => {
         onClick();

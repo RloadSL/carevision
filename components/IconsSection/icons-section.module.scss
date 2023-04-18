@@ -30,13 +30,8 @@
     margin-bottom: 2rem;
 
     .title {
-      color: colors.$main;
-      font-weight: bold;
-      font-size: 1.8rem;
 
-      span {
-        color: colors.$palette1;
-      }
+      @extend %mainTitle
     }
   }
 

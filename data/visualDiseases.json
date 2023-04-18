@@ -1,0 +1,26 @@
+[
+  {
+    "buttonLabel": "Ich bin kurzsichtig",
+    "img": "kurzsichtig",
+    "img2": "kurzsichtig_2",
+    "text": "option1"
+  },
+  {
+    "buttonLabel": "Ich bin weitsichtig",
+    "img": "weitsichtig",
+    "img2": "weitsichtig_2",
+    "text": "option2"
+  },
+  {
+    "buttonLabel": "Ich habe eine Hornhautverkrümmung",
+    "img": "hornhautverkrummung",
+    "img2": "hornhautverkrummung_2",
+    "text": "option3"
+  },
+  {
+    "buttonLabel": "Ich trage eine Lesebrille",
+    "img": "lesebrille",
+    "img2": "lesebrille_2",
+    "text": "option4"
+  }
+]

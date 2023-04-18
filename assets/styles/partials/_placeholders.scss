@@ -11,12 +11,16 @@
 
 %mainTitle {
   color: colors.$main;
-  margin-top: 0px;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 1.8rem;
+
+  span {
+    color: colors.$palette1;
+  }
 }
 
 %beforeAfter {
-  content: '';
+  content: "";
   display: block;
   min-width: 20px;
   height: 20px;

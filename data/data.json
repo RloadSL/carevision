@@ -3,6 +3,7 @@
   "contact.button.label": "Contact",
   "phoneNumber.button.label": "0800 8888 474",
   "loginNow.button.label": "Jetzt anmelden",
+  "learnMore.button.label": "Mehr erfahren",
 
   "customerService.submenu.label": "<span>Kostenfreie</span> Servicenummer",
   "emailContact.submenu.label": "<span>Infos</span> anfordern",
@@ -15,6 +16,24 @@
   "iconsSection.option4.title": "CARE Vision",
   "iconsSection.option5.title": "CARE Vision",
 
-  "home.information.text": "<span>Online Infoabend  -</span> Augenlasern"
+  "visualDiseases.option1.text.list": "<li>In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
+  "visualDiseases.option2.text.list": "<li> option2 In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
+  "visualDiseases.option3.text.list": "<li>option 3 In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
+  "visualDiseases.option4.text.list": "<li>option 4 In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
 
+  "videoSection.title": "<span>Care Vision</span> in einer minute",
+
+  "videoCall.title": "<span>Persönliche</span> Videoberatung",
+  "videoCall.text.p": "Gerne informieren wir Sie über die Augenlaser- und Linsenbehandlung bei CARE Vision. Vereinbaren Sie Ihre persönliche Videoberatung und stellen Sie uns Ihre Fragen über das Augenlasern und Linsenbehandlungen. <span>Das sind die Vorteile:</span>",
+  "videoCall.text.list": "<li>Wir informieren Sie umfassend über Augenlaser- und Linsenbehandlungen</li><li>Kostenlos und unverbindlich</li><li>Mit einem Klick zugänglich von jedem Gerät, bequem von zu Hause aus</li><li>Schnell und einfach – ganz ohne Wartezeit und Anfahrt</li>",
+
+  "treatments.title": "Behandlungen",
+  "treatments.option1.label": "Augenlasern",
+  "treatments.option2.label": "Multifokallinsen",
+  "treatments.option3.label": "ICL Linsenbehandlung",
+  "treatments.option1.text": "Kurzsichtigkeit, Weitsichtigkeit sowie Hornhautverkrümmung können durch eine Augenlaserbehandlung korrigiert werden.",
+  "treatments.option2.text": "Kurzsichtigkeit, Weitsichtigkeit sowie Hornhautverkrümmung können durch eine Augenlaserbehandlung korrigiert werden.",
+  "treatments.option3.text": "Kurzsichtigkeit, Weitsichtigkeit sowie Hornhautverkrümmung können durch eine Augenlaserbehandlung korrigiert werden.",
+
+  "home.information.text": "<span>Online Infoabend  -</span> Augenlasern"
 }

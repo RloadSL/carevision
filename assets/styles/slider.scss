@@ -1,0 +1,81 @@
+@use "./partials/variables/colors" as colors;
+@use "./partials/mixins/devices" as devices;
+
+.swiper-slide:not(.swiper-slide-active) {
+	opacity: 0 !important;
+}
+
+.swiper-pagination {
+	margin-bottom: 50px;
+
+	.swiper-pagination-bullet {
+		cursor: pointer;
+	}
+}
+
+// .swiper-pagination-bullet {
+// 	background: white !important;
+// 	padding: 20px !important;
+// 	width: fit-content !important;
+// 	border-radius: 100px;
+// 	color: colors.$palette1;
+
+// 	&-active {
+// 		background: colors.$palette1 !important;
+// 		color: white;
+// 	}
+// }
+
+.swiper {
+	display: flex !important;
+	flex-direction: column-reverse;
+}
+
+.treatments {
+	.swiper-pagination {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin: auto;
+
+
+		@include devices.device(tablet) {
+			width: 55%;
+			margin-bottom: 2rem;
+			align-items: center;
+
+		}
+	}
+	.swiper-pagination-bullet {
+		background: colors.$palette2 !important;
+		border-radius: 100px;
+		color: black;
+		padding: 20px !important;
+		// display: flex;
+		// flex-wrap: wrap;
+		width: 48%;
+		text-align: center;
+
+		&:last-child {
+			white-space: nowrap;
+			width: fit-content;
+			margin-top: 1rem;
+
+			@include devices.device(tablet) {
+			margin-top: 0;
+			}
+		}
+
+		@include devices.device(tablet) {
+			padding: 20px !important;
+			padding-left: 30px !important ;
+			padding-right: 30px !important;
+			width: fit-content !important;
+		}
+
+		&-active {
+			background: colors.$palette1 !important;
+			color: white;
+		}
+	}
+}
