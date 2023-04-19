@@ -1,0 +1,27 @@
+@use '../../assets/styles/partials/placeholders' as placeholders;
+@use '../../assets/styles/partials/mixins/devices' as devices;
+@use '../../assets/styles/partials/mixins/layout' as layout;
+@use '../../assets/styles/partials/variables/colors' as colors;
+
+.hero {
+  background-image: url(../../assets/img/hero1.jpg);
+  min-height: 50vh;
+  position: relative;
+  margin-bottom: 300px;
+
+  .hero_info {
+    @extend %mainLayout;
+    background-color: colors.$main;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom:-10%;
+    height: 100px;
+
+    @include devices.device(tablet) {
+      display: flex;
+    }
+  }
+}

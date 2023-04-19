@@ -1,0 +1,52 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.onlineInformation {
+  @extend %mainLayout;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    @extend %mainTitle;
+    text-align: center;
+    span {
+      display: block;
+    }
+
+    @include devices.device(tablet) {
+      text-align: left;
+    }
+  }
+
+  @include devices.device(tablet) {
+    flex-direction: row-reverse;
+  }
+
+  &_image {
+    width: 70%;
+
+    @include devices.device(tablet) {
+      width: 50%;
+    }
+  }
+
+  &_text {
+    width: 100%;
+    text-align: center;
+    @include devices.device(tablet) {
+      margin-right: 10rem;
+      width: 30%;
+      text-align: left;
+    }
+    button {
+      margin: auto;
+
+      @include devices.device(tablet) {
+        margin: 0;
+      }
+    }
+  }
+}

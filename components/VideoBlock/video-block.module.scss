@@ -1,0 +1,39 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.videoBlock {
+  @extend %mainLayout;
+
+  h2 {
+    @extend %mainTitle;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    span {
+      display: block;
+
+      @include devices.device(tablet) {
+        display: inline;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  &_content {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 3rem;
+
+    @include devices.device(tablet) {
+      padding-bottom: 6rem;
+    }
+
+    video {
+      width: 90%;
+      display: block;
+      margin: auto;
+    }
+  }
+}

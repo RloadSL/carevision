@@ -10,7 +10,6 @@
 
 .home {
   position: relative;
-  padding-top: 20rem;
 
   &_information {
     @extend %mainLayout;
@@ -51,6 +50,8 @@
         }
       }
     }
+
+
   }
 
   // section {
@@ -84,5 +85,33 @@
     background-color: colors.$palette2;
     padding-bottom: 3rem;
     padding-top: 3rem;
+  }
+
+  &_video {
+    position: relative;
+    &::before {
+      @extend %beforeAfter;
+      background-color: white;
+      min-height: 100px;
+      height: 50%;
+      position: absolute;
+      top:0;
+      width: 100%;
+    }
+
+    &::after {
+      @extend %beforeAfter;
+      background-color: colors.$palette2;
+      min-height: 100px;
+      height: 50%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  &_testimonials {
+    @extend %mainLayout;
+    background-color: colors.$grey20;
   }
 }

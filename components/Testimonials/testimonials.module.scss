@@ -1,0 +1,76 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.testimonials {
+  margin: auto;
+
+  @include devices.device(tablet) {
+    max-width: 90%;
+  }
+
+  &_top {
+    text-align: center;
+    margin-bottom: 50px;
+    h2 {
+      @extend %mainTitle;
+    }
+  }
+}
+
+.slider {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tabs {
+  &_content {
+    &__text {
+      text-align: right;
+      h3 {
+        color: colors.$palette1;
+        margin-bottom: 0px;
+        font-weight: bold;
+      }
+      p {
+        color: colors.$grey50;
+      }
+    }
+  }
+
+  &_button {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+
+    &__text {
+      display: none;
+      @include devices.device(tablet) {
+        display: block;
+        span {
+          color: colors.$grey50;
+          display: block;
+
+          &:first-child {
+            font-weight: bold;
+            color: black;
+          }
+        }
+      }
+    }
+
+    &__image {
+      width: 57px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex-shrink: 0;
+
+      @include devices.device(tablet) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

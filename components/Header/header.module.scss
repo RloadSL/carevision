@@ -16,6 +16,10 @@
   z-index: 900;
   background-color: white;
 
+  @include devices.device(tablet) {
+    position: static;
+  }
+
   &_top {
     @extend %mainLayout;
     display: flex;

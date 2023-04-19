@@ -1,37 +1,51 @@
+import Image from "next/image";
 import React, { useState } from "react";
-import style from "./treatments.module.scss";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Pagination } from "swiper";
-import TextApp from "../TextApp";
-import Image from "next/image";
-import woman from "../../assets/img/treatments.jpg";
-import arrow from "../../assets/img/arrow_icon.svg";
 import ButtonApp from "../ButtonApp";
+import TextApp from "../TextApp";
+import style from "./testimonials.module.scss";
+import woman from "../../assets/img/treatments.jpg";
+import testimonials from "../../data/testimonials.json";
+import helenThumb from "../../assets/img/testimonials/testi_thumb1.png";
+import charlieThumb from "../../assets/img/testimonials/testi_thumb2.png";
+import CarlaThumb from "../../assets/img/testimonials/testi_thumb3.png";
 
-interface TreatmentsProps {}
+interface TestimonialsProps {}
 
-const Treatments = ({}: TreatmentsProps) => {
-  const buttonLabels = ["Augenlasern", "Multifokallinsen", "ICL Linsenbehandlung"];
+const Testimonials = ({}: TestimonialsProps) => {
   const [swiper, setSwiper] = useState<any>();
   const pagination = {
     clickable: true,
     renderBullet: (index: number, className: any) => {
-      return `<span class="${className} ${style.tabs_button}">${buttonLabels[index]}</span>`;
+      return `<div class="${className} ${style.tabs_button}">
+          <div style="background-image:url(/testimonials/${testimonials[index].thumb})" aria-hidden="true" class="${style.tabs_button__image}">
+          </div>
+          <div class="${style.tabs_button__text}">
+            <span>${testimonials[index].name}</span>
+            <span>${testimonials[index].profession}</span>
+          </div>
+        </div>`;
     }
   };
 
   return (
-    <div className={`${style.treatments} treatments`}>
-      <h2 className={style.title}>
-        <TextApp labelID="treatments.title" />
-      </h2>
-      <div className={style.slider_content}>
+    <div className={`${style.testimonials} testimonials`}>
+      <div className={style.testimonials_top}>
+        <h2 className={style.title}>
+          <TextApp labelID="testimonials.title" />
+        </h2>
+        <p>
+          <TextApp labelID="testimonials.text" />
+        </p>
+      </div>
+
+      <div className={style.slider}>
         <Swiper
           spaceBetween={20}
-          // centeredSlides={false}
           slidesPerView={1}
           pagination={pagination}
           onSwiper={(swiper) => {
@@ -49,22 +63,12 @@ const Treatments = ({}: TreatmentsProps) => {
                   <Image src={woman} alt={""} />
                 </div>
                 <div className={style.tabs_content__text}>
-                  <div>
-                    <h3>
-                      <TextApp labelID="treatments.option1.label" />
-                    </h3>
-                    <p>
-                      <TextApp labelID="treatments.option1.text" />
-                    </p>
-                  </div>
-                  <div className={style.button}>
-                    <ButtonApp
-                      labelID="learnMore.button.label"
-                      onClick={() => console.log("hola")}
-                      icon={arrow}
-                      iconAlign="right"
-                    />
-                  </div>
+                  <h3>
+                    <TextApp labelID="treatments.option1.label" />
+                  </h3>
+                  <p>
+                    <TextApp labelID="treatments.option1.text" />
+                  </p>
                 </div>
               </div>
             </SwiperSlide>
@@ -81,4 +85,4 @@ const Treatments = ({}: TreatmentsProps) => {
   );
 };
 
-export default Treatments;
+export default Testimonials;

@@ -10,6 +10,11 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { SwiperSlide } from "swiper/react";
 import VisualDiseases from "@/components/VisualDiseases";
 import Treatments from "@/components/Treatments";
+import VideoConsultation from "@/components/VideoConsultation";
+import VideoBlock from "@/components/VideoBlock";
+import OnlineInformation from "@/components/OnlineInformation";
+import Testimonials from "@/components/Testimonials";
+import Hero from "@/components/Hero";
 // import RLDTabs from "@/components/DD_RLDTabs";
 // import VisualDiseasesTabs from "@/components/DD-VisualDiseasesTabs/VisualDiseasesTabs";
 
@@ -27,20 +32,30 @@ const Home: NextPage = () => {
     <div className={style.home}>
       <SEOHead title="CareVision" description="Here the SEO description of the page" />
       <main>
-        <section className={style.home_hero}>hero</section>
+        <section className={style.home_hero}>
+          <Hero/>
+        </section>
         <section className={style.home_icons}>
           <IconsSection />
         </section>
-        <section className={style.home_video}>video</section>
-        <section className={style.home_treatments}>
-          <Treatments/>
+        <section className={style.home_video}>
+          <VideoBlock/>
         </section>
-        <section className={style.home_consultation}>consultation</section>
+        <section className={style.home_treatments}>
+          <Treatments />
+        </section>
+        <section className={style.home_consultation}>
+          <VideoConsultation />
+        </section>
         <section className={style.home_visualDiseases}>
           <VisualDiseases />
         </section>
-        <section className={style.home_doctor}>doctor</section>
-        <section className={style.home_comments}>comments</section>
+        <section className={style.home_doctor}>
+          <OnlineInformation/>
+        </section>
+        <section className={style.home_testimonials}>
+          <Testimonials/>
+        </section>
         <div className={style.home_information}>
           <div className={style.home_information_content}>
             <h3>

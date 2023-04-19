@@ -4,9 +4,16 @@
   "phoneNumber.button.label": "0800 8888 474",
   "loginNow.button.label": "Jetzt anmelden",
   "learnMore.button.label": "Mehr erfahren",
+  "registerNow.button.label": "Jetzt anmelden",
+  "requestInfo.button.label": "Solicitar información",
+
 
   "customerService.submenu.label": "<span>Kostenfreie</span> Servicenummer",
   "emailContact.submenu.label": "<span>Infos</span> anfordern",
+
+  "hero.title":"<span>Lorem ipsum dolor sit</span> Cras pellentesque",
+  "hero.price":"602<span>€</span>",
+  "hero.slider.text1":"texto 1. Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
 
   "iconsSection.title": "<span>Gute Gründe für</span> CARE Vision",
   "iconsSection.text": "Aante ultrices, posuere lorem et, fringilla libero. Suspendisse ultricies scelerisque libero at malesuada. Etiam venenatis dolor non nisl aliquam mattis. Proin fermentum efficitur justo, ut fringilla mauris imperdiet sed. Mauris ante diam, bibendum et molestie et, dictum non ante dictum non ante.",
@@ -21,11 +28,11 @@
   "visualDiseases.option3.text.list": "<li>option 3 In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
   "visualDiseases.option4.text.list": "<li>option 4 In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
 
-  "videoSection.title": "<span>Care Vision</span> in einer minute",
+  "videoBlock.title": "<span>Care Vision</span> in einer minute",
 
-  "videoCall.title": "<span>Persönliche</span> Videoberatung",
-  "videoCall.text.p": "Gerne informieren wir Sie über die Augenlaser- und Linsenbehandlung bei CARE Vision. Vereinbaren Sie Ihre persönliche Videoberatung und stellen Sie uns Ihre Fragen über das Augenlasern und Linsenbehandlungen. <span>Das sind die Vorteile:</span>",
-  "videoCall.text.list": "<li>Wir informieren Sie umfassend über Augenlaser- und Linsenbehandlungen</li><li>Kostenlos und unverbindlich</li><li>Mit einem Klick zugänglich von jedem Gerät, bequem von zu Hause aus</li><li>Schnell und einfach – ganz ohne Wartezeit und Anfahrt</li>",
+  "videoConsultation.title": "<span>Persönliche</span> Videoberatung",
+  "videoConsultation.text.p": "Gerne informieren wir Sie über die Augenlaser- und Linsenbehandlung bei CARE Vision. Vereinbaren Sie Ihre persönliche Videoberatung und stellen Sie uns Ihre Fragen über das Augenlasern und Linsenbehandlungen.",
+  "videoConsultation.text.list": "<span>Das sind die Vorteile:</span><ul><li>Wir informieren Sie umfassend über Augenlaser- und Linsenbehandlungen</li><li>Kostenlos und unverbindlich</li><li>Mit einem Klick zugänglich von jedem Gerät, bequem von zu Hause aus</li><li>Schnell und einfach – ganz ohne Wartezeit und Anfahrt</li></ul>",
 
   "treatments.title": "Behandlungen",
   "treatments.option1.label": "Augenlasern",
@@ -34,6 +41,31 @@
   "treatments.option1.text": "Kurzsichtigkeit, Weitsichtigkeit sowie Hornhautverkrümmung können durch eine Augenlaserbehandlung korrigiert werden.",
   "treatments.option2.text": "Kurzsichtigkeit, Weitsichtigkeit sowie Hornhautverkrümmung können durch eine Augenlaserbehandlung korrigiert werden.",
   "treatments.option3.text": "Kurzsichtigkeit, Weitsichtigkeit sowie Hornhautverkrümmung können durch eine Augenlaserbehandlung korrigiert werden.",
+
+  "onlineInformation.title": "<span>Online Infoabend</span> - Augenlasern",
+  "onlineInformation.text": "<p>Ihr erster Schritt Richtung Freiheit von der Brille!</p><p>Nehmen Sie an unserem Online-Infoabend per Videoschalte teil und stellen Sie alle Ihre Fragen rund um das Thema Augenlasern.</p><p>CARE Vision Arzt Mohamad Bdoura informiert umfassend uber das Thema Augenlasern - kostenlos und unverbindlich.</p>",
+  "onlineInformation.bubble1": "<h3>Save the Date</h3><p>22.04 18:00 Uhr</p>",
+  "onlineInformation.bubble2": "<h3>VideoKonferenz <span>InfoabendAugenlasern</span></h3><p>22.04 18:00 Uhr</p>",
+
+  "testimonials.title":"<span>Vídeo-Slider</span> Pacientes",
+  "testimonials.text":"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse quis leo.",
+  "testimonials.option1.label":"<b>Name</b> Profession",
+  "testimonials.option2.label":"<b>Name</b> Profession",
+  "testimonials.option3.label":"<b>Name</b> Profession",
+  "testimonials.option4.label":"<b>Name</b> Profession",
+  "testimonials.option5.label":"<b>Name</b> Profession",
+  "testimonials.option1.text":"<b>Helena Smith</b><span>Nadadora Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
+  "testimonials.option2.text":"<b>Charlie Smith</b><span>Golfista Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
+  "testimonials.option3.text":"<b>Carla Smith</b><span>Atleta Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
+  "testimonials.option4.text":"<b>Sonia Smith</b><span>Cazadora Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
+  "testimonials.option5.text":"<b>Teresa Smith</b><span>Agricultora Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
+
+  "form.title": "Lorem ipsum dolor sit amet",
+  "form.name.input.label":"Vorname",
+  "form.lastname.input.label":"Nachname",
+  "form.telephon.input.label":"Telefon",
+  "form.email.input.label":"E-mail",
+  "form.legalCheck.input.label":"He leído y acepto la Política de Privacidad.",
 
   "home.information.text": "<span>Online Infoabend  -</span> Augenlasern"
 }

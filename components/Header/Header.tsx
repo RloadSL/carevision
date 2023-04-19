@@ -39,12 +39,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div
-      className={`${style.header} ${style[isMobile ? "mobile" : "pc"]} navigation`}
-      style={
-        useScrollDistance() >= 100 ? { backgroundColor: "white" } : { backgroundColor: "white" }
-      }
-    >
+    <div className={`${style.header} ${style[isMobile ? "mobile" : "pc"]} navigation`}>
       <header className={`${scroll ? style.header_content__scrolled : ""}`}>
         <div className={style.header_top}>
           <div className={`${style.header_logo} logo`}>

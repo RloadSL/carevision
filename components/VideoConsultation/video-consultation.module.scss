@@ -1,0 +1,67 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.videoConsultation {
+  @extend %mainLayout;
+
+  @include devices.device(tablet) {
+    background: url(../../assets/img/videoConsultation.jpg) no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &_text {
+    @include devices.device(tablet) {
+      background-color: white;
+      width: 50%;
+      padding: 2rem;
+      border-radius: 10px
+    }
+
+    @include devices.device(smScreen) {
+      width: 40%;
+    }
+
+    &_list {
+      font-size: 1rem;
+      color: colors.$main;
+
+      span {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 3rem;
+      }
+
+      li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          @extend %beforeAfter;
+          background: url(../../assets/img/check_list2.svg) no-repeat;
+          flex-shrink: 0;
+          margin-right: 15px
+        }
+      }
+    }
+  }
+}
+
+.title {
+  @extend %mainTitle;
+  text-align: center;
+  @include devices.device(tablet) {
+    text-align: left;
+
+  }
+
+  span {
+    display: block;
+  }
+}

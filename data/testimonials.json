@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Helena Smith",
+    "profession": "Nadadora",
+    "thumb": "testi_thumb1.png"
+  },
+  {
+    "name": "Charlie Smith",
+    "profession": "Golfista",
+    "thumb": "testi_thumb2.png"
+  },
+  {
+    "name": "Carla Smith",
+    "profession": "Atleta",
+    "thumb": "testi_thumb1.png"
+  }
+]
