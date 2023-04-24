@@ -3,7 +3,6 @@
 @use "../../assets/styles/partials/mixins/layout" as layout;
 @use "../../assets/styles/partials/variables/colors" as colors;
 
-
 .button {
   background-color: colors.$palette1;
   border-radius: 50px;
@@ -22,13 +21,12 @@
     margin-top: 20px;
   }
 
-
   span {
     position: relative;
     z-index: 100;
   }
-   &::after {
-    content: '';
+  &::after {
+    content: "";
     background-color: colors.$main;
     width: 100px;
     height: 100px;
@@ -41,18 +39,40 @@
     z-index: 0;
     border-radius: 100%;
     transform: scale(0);
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     transform-origin: center;
-   }
+  }
 
-   &:hover {
+  &:hover {
     span {
       color: white;
     }
-   }
+  }
 
-   &:hover::after {
+  &:hover::after {
     transform: scale(4);
-    transition: all .2s ease-in-out;
-   }
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.contactForm {
+  button {
+    max-width: 100% !important;
+    margin: 0;
+  }
+
+  &_inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &_container {
+      width: 100%;
+      margin-right: 0 !important;
+
+      @include devices.device(smScreen) {
+        width: 49%;
+      }
+    }
+  }
 }

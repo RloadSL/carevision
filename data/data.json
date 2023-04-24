@@ -7,13 +7,15 @@
   "registerNow.button.label": "Jetzt anmelden",
   "requestInfo.button.label": "Solicitar información",
 
-
   "customerService.submenu.label": "<span>Kostenfreie</span> Servicenummer",
   "emailContact.submenu.label": "<span>Infos</span> anfordern",
 
   "hero.title":"<span>Lorem ipsum dolor sit</span> Cras pellentesque",
   "hero.price":"602<span>€</span>",
-  "hero.slider.text1":"texto 1. Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
+  "hero.slider.text1":"Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
+  "hero.slider.text2":"TEXTO 2. Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
+  "hero.slider.text3":"TEXTO 3. Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
+
 
   "iconsSection.title": "<span>Gute Gründe für</span> CARE Vision",
   "iconsSection.text": "Aante ultrices, posuere lorem et, fringilla libero. Suspendisse ultricies scelerisque libero at malesuada. Etiam venenatis dolor non nisl aliquam mattis. Proin fermentum efficitur justo, ut fringilla mauris imperdiet sed. Mauris ante diam, bibendum et molestie et, dictum non ante dictum non ante.",
@@ -22,7 +24,7 @@
   "iconsSection.option3.title": "CARE Vision",
   "iconsSection.option4.title": "CARE Vision",
   "iconsSection.option5.title": "CARE Vision",
-
+  "visualDiseases.title": "<span>Problemas</span> visuales",
   "visualDiseases.option1.text.list": "<li>In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
   "visualDiseases.option2.text.list": "<li> option2 In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
   "visualDiseases.option3.text.list": "<li>option 3 In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
@@ -60,10 +62,10 @@
   "testimonials.option4.text":"<b>Sonia Smith</b><span>Cazadora Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
   "testimonials.option5.text":"<b>Teresa Smith</b><span>Agricultora Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
 
-  "form.title": "Lorem ipsum dolor sit amet",
+  "form.title": "<span>Kostenloses</span> Infopaket",
   "form.name.input.label":"Vorname",
   "form.lastname.input.label":"Nachname",
-  "form.telephon.input.label":"Telefon",
+  "form.phone.input.label":"Telefon",
   "form.email.input.label":"E-mail",
   "form.legalCheck.input.label":"He leído y acepto la Política de Privacidad.",
 

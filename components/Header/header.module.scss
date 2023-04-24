@@ -161,6 +161,45 @@
   .submenu {
     background-color: colors.$palette2;
 
+    button {
+      background-color: transparent;
+      font-size: inherit;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      &::before {
+        @extend %submenuIcon;
+      }
+
+      span {
+        & > span {
+          color: colors.$palette1;
+          display: block;
+        }
+      }
+    }
+
+    &_button__form {
+      padding-left: 0.8rem;
+
+      &::before {
+        background: url(../../assets/img/menu_mail.svg) no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &_button__phone {
+      border-right: 1px solid colors.$main;
+      padding-right: 0.8rem;
+
+      &::before {
+        background: url(../../assets/img/menu_call.svg) no-repeat;
+        background-size: contain;
+      }
+    }
+
     ul {
       display: flex;
       color: colors.$main;
@@ -173,34 +212,6 @@
         display: flex;
         align-items: center;
         box-sizing: content-box;
-
-        &::before {
-          @extend %submenuIcon;
-        }
-
-        &:first-child {
-          border-right: 1px solid colors.$main;
-          padding-right: 0.8rem;
-
-          &::before {
-            background: url(../../assets/img/menu_call.svg) no-repeat;
-            background-size: contain;
-          }
-        }
-
-        &:last-child {
-          padding-left: 0.8rem;
-
-          &::before {
-            background: url(../../assets/img/menu_mail.svg) no-repeat;
-            background-size: contain;
-          }
-        }
-
-        span {
-          color: colors.$palette1;
-          display: block;
-        }
       }
     }
   }
@@ -243,4 +254,51 @@
       }
     }
   }
+}
+
+.fixedButton {
+  display: none;
+  &::before {
+    @extend %beforeAfter;
+    background: url(../../assets/img/calendar.svg) no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 30px;
+    margin-bottom: 10px;
+
+   
+
+    @include devices.device(mdScreen) {
+      height: 50px;
+      width: 40px;
+    }
+  }
+
+  @include devices.device(tablet) {
+    display: block;
+    position: fixed;
+    top: 20%;
+    right: -10px;
+    z-index: 999;
+    background-color: colors.$palette3;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    height: 80px;
+  }
+
+  @include devices.device(mdScreen) {
+    height: 100px;
+
+  }
+
+
 }

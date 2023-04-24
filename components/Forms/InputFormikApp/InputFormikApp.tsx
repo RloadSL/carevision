@@ -1,3 +1,4 @@
+import TextApp from "@/components/TextApp";
 import { FieldHookConfig, useField } from "formik";
 import Image from "next/image";
 import React, { useEffect, useState, useRef, useCallback } from "react";
@@ -6,7 +7,7 @@ import style from "./inputFormikApp.module.scss";
 type TYPEINPUT = "email" | "password" | "number" | "text";
 
 export interface INPUTBLOCKPROPS {
-  labelID: any;
+  labelID: string;
   onChange?: Function;
   onBlur?: Function;
   type: TYPEINPUT;
@@ -58,6 +59,8 @@ const InputFormikApp = ({
   const [field, meta] = useField({ name });
   const [isFloating, setIsFloating] = useState("");
 
+  console.log(labelID)
+
   useEffect(() => {
     setIsFloating(field.value ? `${style.filled} ${style.label}` : style.label);
   }, [field.value]);
@@ -77,7 +80,7 @@ const InputFormikApp = ({
         {labelID && (
           <label htmlFor={name} className={`${icon ? style.iconLabel : style.label} ${isFloating}`}>
             <span>
-              label
+              <TextApp labelID={labelID}/>
             </span>
           </label>
         )}

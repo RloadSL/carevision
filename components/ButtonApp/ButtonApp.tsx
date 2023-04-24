@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { type } from "os";
 import React from "react";
 import TextApp from "../TextApp";
 import style from "./button-app.module.scss";
@@ -8,6 +9,7 @@ interface ButtonAppProps {
   onClick: Function;
   icon?: string;
   iconAlign?: "left" | "right";
+  buttonType?: "button" | "submit" | "reset";
 }
 
 /** Button component for web
@@ -15,13 +17,21 @@ interface ButtonAppProps {
  * @param onClick onClick function
  * @param icon Optional image for the icon of the button
  * @param iconAlign left | right position of the icon with the button label
+ * @param buttonType Button type
  * @returns
  */
 
-const ButtonApp = ({ labelID, onClick, icon, iconAlign = "right" }: ButtonAppProps) => {
+const ButtonApp = ({
+  labelID,
+  onClick,
+  icon,
+  iconAlign = "right",
+  buttonType = "button"
+}: ButtonAppProps) => {
   return (
     <button
       style={iconAlign !== "right" ? { flexDirection: "row" } : { flexDirection: "row-reverse" }}
+      type={buttonType}
       className={style.button}
       onClick={() => {
         onClick();

@@ -1,0 +1,35 @@
+@use '../../assets/styles/partials/placeholders' as placeholders;
+@use '../../assets/styles/partials/mixins/devices' as devices;
+@use '../../assets/styles/partials/mixins/layout' as layout;
+@use '../../assets/styles/partials/variables/colors' as colors;
+
+.modal {
+  &_overlay {
+    background: rgba(black, .5);
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  &_content {
+    background-color: colors.$main;
+    position: relative;
+    right: 0;
+    padding: 20px;
+    border-radius: 10px;
+
+    .close {
+      background-color: transparent;
+      color: white;
+      position: absolute;
+      right: 5px;
+      top: 10px;
+    }
+  }
+}

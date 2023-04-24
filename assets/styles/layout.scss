@@ -24,11 +24,21 @@ html {
 	}
 }
 
+.app {
+	position: relative;
+}
+
+.title {
+	@extend %mainTitle;
+	color: white;
+	text-align: center;
+}
+
 $headings: h1 h2 h3 h4 h5 h6;
 
 @each $heading in $headings {
 	#{$heading} {
-		font-weight: 500;
+		font-weight: bold;
 	}
 }
 
@@ -59,6 +69,44 @@ canvas {
 
 .flex {
 	display: flex;
+}
+
+@for $i from 10 through 100 {
+	.padding-#{$i} {
+		padding: (0% + $i);
+	}
+
+	.padding-left-#{$i} {
+		padding-left: (0% + $i);
+	}
+
+	.padding-right-#{$i} {
+		padding-right: (0% + $i);
+	}
+
+	.padding-top-#{$i} {
+		padding-top: (0% + $i);
+	}
+
+	.padding-bottom-#{$i} {
+		padding-bottom: (0% + $i);
+	}
+
+	.margin-top-#{$i} {
+		margin-top: (0px + $i);
+	}
+
+	.margin-left-#{$i} {
+		margin-left: (0px + $i);
+	}
+
+	.margin-right-#{$i} {
+		margin-right: (0px + $i);
+	}
+
+	.margin-bottom-#{$i} {
+		margin-bottom: (0px + $i);
+	}
 }
 
 .author {
@@ -154,7 +202,6 @@ canvas {
 		display: inline-block;
 		width: 20px;
 		height: 20px;
-		// background-image: url(../assets/img/icons/arrow-b.svg);
 		background-repeat: no-repeat;
 		background-size: 12px;
 		background-position: center;

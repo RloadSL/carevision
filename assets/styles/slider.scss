@@ -39,9 +39,10 @@
 		margin: auto;
 
 		@include devices.device(tablet) {
-			width: 55%;
+			width: 100%;
 			margin-bottom: 2rem;
 			align-items: center;
+			justify-content: center;
 		}
 	}
 	.swiper-pagination-bullet {
@@ -53,6 +54,12 @@
 		// flex-wrap: wrap;
 		width: 48%;
 		text-align: center;
+
+		@include devices.device(tablet) {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+
 
 		&:last-child {
 			white-space: nowrap;

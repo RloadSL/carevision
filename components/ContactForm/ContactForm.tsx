@@ -3,6 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import InputFormikApp from "../Forms/InputFormikApp";
 import style from "./contact-form.module.scss";
+import ButtonApp from "../ButtonApp";
+import InputCheckFormikApp from "../Forms/InputCheckFormikApp ";
 
 /** Form field validation schema*/
 const validationSchema = Yup.object().shape({
@@ -30,16 +32,32 @@ const ContactForm = ({}: ContactFormProps) => (
     }}
   >
     {({ isSubmitting }) => (
-      <Form>
-        <InputFormikApp labelID="form.contact.label.nameSurname" type="text" name="fullname" />
-        <InputFormikApp labelID="form.contact.label.company" type="text" name="company" />
-        <InputFormikApp labelID="form.contact.label.phone" type="text" name="phone" />
-        <InputFormikApp labelID="form.contact.label.email" type="email" name="email" />
-        <button type="submit" disabled={isSubmitting} className={style.button}>
-          <span>
-            enviar
-          </span>
-        </button>
+      <Form className={style.contactForm}>
+        <div className={style.contactForm_inputs}>
+          <div className={`${style.contactForm_inputs_container} margin-right-10`}>
+            <InputFormikApp labelID="form.name.input.label" type="text" name="email" />
+          </div>
+          <div className={`${style.contactForm_inputs_container} `}>
+            <InputFormikApp labelID="form.lastname.input.label" type="text" name="email" />
+          </div>
+          <div className={`${style.contactForm_inputs_container} margin-right-10`}>
+            <InputFormikApp labelID="form.phone.input.label" type="text" name="email" />
+          </div>
+          <div className={`${style.contactForm_inputs_container}`}>
+            <InputFormikApp labelID="form.email.input.label" type="email" name="email" />
+          </div>
+        </div>
+        {/* <div>
+          <InputCheckFormikApp>
+            texto del label
+            </InputCheckFormikApp>
+        </div> */}
+        <ButtonApp
+          labelID="requestInfo.button.label"
+          onClick={() => console.log("hola")}
+          iconAlign="right"
+          buttonType="submit"
+        />
       </Form>
     )}
   </Formik>

@@ -1,27 +1,151 @@
-@use '../../assets/styles/partials/placeholders' as placeholders;
-@use '../../assets/styles/partials/mixins/devices' as devices;
-@use '../../assets/styles/partials/mixins/layout' as layout;
-@use '../../assets/styles/partials/variables/colors' as colors;
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
 
 .hero {
-  background-image: url(../../assets/img/hero1.jpg);
-  min-height: 50vh;
+  background-size: cover;
+  background-position: top center;
+  min-height: 90vh;
   position: relative;
-  margin-bottom: 300px;
+  // margin-bottom: 10rem;
+  @include devices.device(tablet) {
+    min-height: 70vh;
+  }
 
-  .hero_info {
-    @extend %mainLayout;
-    background-color: colors.$main;
-    border-radius: 20px;
+  @include devices.device(smScreen) {
+    height: 75vh;
+    // min-height: 500px;
+  }
+
+  .container {
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
-    bottom:-10%;
-    height: 100px;
+    bottom: 0;
+    padding: 12px;
+
+    @include devices.device(smScreen) {
+      padding: 20px;
+      // bottom:-35%;
+    }
+  }
+
+  &_image {
+    height: 70vh;
+    background: url(../../assets/img/hero1.jpg);
+    background-size: cover;
+
+    @include devices.device(tablet) {
+      height: 45vh;
+    }
+
+    @include devices.device(smScreen) {
+      height: 70%
+    }
+  }
+
+  &_info {
+    @extend %mainLayout;
+    background-color: colors.$main;
+    border-radius: 20px;
+    padding: 2rem;
 
     @include devices.device(tablet) {
       display: flex;
     }
+
+    &_text {
+      // display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include devices.device(tablet) {
+        display: block;
+      }
+    }
+
+    &__left {
+      width: 100%;
+
+      @include devices.device(tablet) {
+        width: 50%;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
+
+    &__right {
+      width: 50%;
+      p {
+        color: white;
+      }
+    }
+  }
+}
+
+.slider {
+  p {
+    margin: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    @include devices.device(smScreen) {
+      max-width: 80%;
+    }
+
+    &::before {
+      @extend %beforeAfter;
+      background: url(../../assets/img/check_list3.svg) no-repeat;
+      background-size: contain;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.title {
+  @extend %mainTitle;
+  color: white;
+  border-bottom: 1px solid white;
+  margin: 0;
+  padding-bottom: 1rem;
+  font-size: 2.2rem;
+  // width: 50%;
+
+  @include devices.device(lgScreen) {
+    // border-bottom: 1px solid white;
+    border-right: 0;
+    width: fit-content;
+    font-size: 3rem;
+  }
+
+  span {
+    color: colors.$palette1;
+    display: block;
+  }
+}
+
+.price {
+  color: colors.$palette1;
+  font-size: 3.5rem;
+  font-weight: lighter;
+
+  @include devices.device(smScreen) {
+    font-size: 3.5rem;
+  }
+
+  @include devices.device(mdScreen) {
+    font-size: 5rem;
+  }
+
+  span {
+    font-size: 3rem;
+    color: colors.$palette1;
   }
 }

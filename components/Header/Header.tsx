@@ -15,12 +15,16 @@ import TextApp from "../TextApp";
 import calendarIcon from "../../assets/img/calendar.svg";
 // import gsap, { Power2 } from "gsap";
 
+interface HeaderProps {
+  displayModal: Function;
+}
+
 /**
  * Component that includes the header with the menu
  * @returns
  */
 
-const Header = () => {
+const Header = ({ displayModal }: HeaderProps) => {
   const { useScrollDistance, useWindowSize } = useComponentUtils();
   const { mobileNavAnimation, toggleMobileNav } = useComponentAnimations();
 
@@ -40,7 +44,10 @@ const Header = () => {
 
   return (
     <div className={`${style.header} ${style[isMobile ? "mobile" : "pc"]} navigation`}>
-      <header className={`${scroll ? style.header_content__scrolled : ""}`}>
+      <button className={style.fixedButton}>
+        online termin
+      </button>
+      <header>
         <div className={style.header_top}>
           <div className={`${style.header_logo} logo`}>
             <Link href={"/"}>
@@ -63,7 +70,9 @@ const Header = () => {
           </div>
 
           {isMobile && (
-            <button className={style.mobileButton} onClick={toggleMobileNav}>
+            // <button className={style.mobileButton} onClick={toggleMobileNav}>
+            <button className={style.mobileButton} onClick={()=>console.log('click')}>
+
               <span className="only-readers">menu</span>
             </button>
           )}
@@ -93,14 +102,26 @@ const Header = () => {
           <div className={style.submenu}>
             <ul>
               <li>
-                <div>
-                  <TextApp labelID="customerService.submenu.label" />
-                </div>
+                <button
+                  className={style.submenu_button__phone}
+                  type="button"
+                  onClick={() => alert("hola")}
+                >
+                  <span>
+                    <TextApp labelID="customerService.submenu.label" />
+                  </span>
+                </button>
               </li>
               <li>
-                <div>
-                  <TextApp labelID="emailContact.submenu.label" />
-                </div>
+                <button
+                  className={style.submenu_button__form}
+                  type="button"
+                  onClick={() => displayModal()}
+                >
+                  <span>
+                    <TextApp labelID="emailContact.submenu.label" />
+                  </span>
+                </button>
               </li>
             </ul>
           </div>

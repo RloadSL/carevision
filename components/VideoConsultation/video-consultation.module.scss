@@ -5,6 +5,7 @@
 
 .videoConsultation {
   @extend %mainLayout;
+  border-radius: 10px;
 
   @include devices.device(tablet) {
     background: url(../../assets/img/videoConsultation.jpg) no-repeat;
@@ -33,7 +34,15 @@
       span {
         display: block;
         font-weight: bold;
-        margin-bottom: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        @include devices.device(tablet) {
+          margin-bottom: 3rem;
+
+        }
+
+
       }
 
       li {

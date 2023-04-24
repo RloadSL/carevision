@@ -8,8 +8,15 @@
   overflow: hidden;
 }
 
+%sectionSpacing {
+  margin-top: 8rem;
+  // margin-bottom: 5rem;
+}
+
 .home {
   position: relative;
+
+ 
 
   &_information {
     @extend %mainLayout;
@@ -17,11 +24,16 @@
     width: 100%;
     max-width: 1000px;
     margin: auto;
-    border-radius: 15px;
-    background: colors.$grey20;
     padding: 0px;
     display: flex;
     align-items: center;
+
+    @include devices.device(tablet){
+      border-radius: 15px;
+      background: colors.$grey20;
+
+
+    }
 
     &::before {
       @extend %beforeAfter;
@@ -30,15 +42,26 @@
       width: 300px;
       height: 100%;
       flex-shrink: 0;
+      display: none;
+
+      @include devices.device(tablet){
+        display: block;
+      }
     }
 
     &_content {
-      width: 70%;
-      padding-left: 4rem;
-      padding-right: 4rem;
+      width: 90%;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include devices.device(tablet){
+        width: 70%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        margin: 0;
+      }
 
       h3 {
         font-weight: bold;
@@ -80,6 +103,19 @@
   //       min-height: 100vh;
   //     }
   //   }
+
+  &_icons, &_treatments, &_video, &_consultation,&_visualDiseases,&_doctor, &_testimonials, &_information, footer   {
+    margin-top: 1rem;
+
+    @include devices.device(smScreen) {
+      margin-top: 6rem;
+    }
+  }
+
+  &_consultation {
+    margin-bottom: 3rem;
+  }
+
 
   &_visualDiseases {
     background-color: colors.$palette2;

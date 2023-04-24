@@ -16,12 +16,12 @@
       display: block;
     }
 
-    @include devices.device(tablet) {
+    @include devices.device(smScreen) {
       text-align: left;
     }
   }
 
-  @include devices.device(tablet) {
+  @include devices.device(smScreen) {
     flex-direction: row-reverse;
   }
 
@@ -29,6 +29,10 @@
     width: 70%;
 
     @include devices.device(tablet) {
+      width: 60%;
+    }
+
+    @include devices.device(smScreen) {
       width: 50%;
     }
   }
@@ -36,7 +40,11 @@
   &_text {
     width: 100%;
     text-align: center;
+
     @include devices.device(tablet) {
+      width: 80%;
+    }
+    @include devices.device(smScreen) {
       margin-right: 10rem;
       width: 30%;
       text-align: left;
@@ -45,6 +53,10 @@
       margin: auto;
 
       @include devices.device(tablet) {
+        margin: 0 auto;
+      }
+
+      @include devices.device(smScreen) {
         margin: 0;
       }
     }

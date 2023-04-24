@@ -13,7 +13,7 @@ const VideoConsultation = ({}: VideoConsultationProps) => {
   const { useWindowSize } = useComponentUtils();
 
   //checking mobile size
-  const isMobile = useWindowSize().width <= 768 ? true : false;
+  const isMobile = useWindowSize().width < 768 ? true : false;
 
   return (
     <div className={style.videoConsultation}>
