@@ -6,6 +6,12 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useState } from "react";
 import "../assets/styles/layout.scss";
+import {Lato} from '@next/font/google'
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight:['400','300','700']
+})
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -13,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     setModalVisible(true);
   };
   return (
-    <div className="app">
+    <div className={`${lato.className} app`}>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="keywords" content="carevision" />
