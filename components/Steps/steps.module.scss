@@ -1,0 +1,83 @@
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
+
+.steps {
+  @extend %mainLayout;
+  text-align: center;
+
+  article {
+    margin-bottom: 3rem;
+    h2 {
+      @extend %mainTitle;
+    }
+    p {
+      max-width: 1000px;
+      margin: auto;
+    }
+  }
+
+  &_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__step1 {
+      .content {
+        &::before {
+          background-image: url(../../public/img/step1.svg);
+        }
+      }
+    }
+
+    &__step2 {
+      .content {
+        &::before {
+          background-image: url(../../public/img/step2.svg);
+        }
+      }
+    }
+
+    &__step3 {
+      .content {
+        &::before {
+          background-image: url(../../public/img/step3.svg);
+        }
+      }
+    }
+
+    li {
+      background-color: white;
+      padding: 2rem;
+      width: 28%;
+      margin: 0 1rem;
+      @extend %borderRadius;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .content {
+        color: colors.$main;
+        &::before {
+          @extend %beforeAfter;
+          background-color: colors.$palette2;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 100%;
+          width: 120px;
+          height: 120px;
+          margin: auto;
+        }
+
+        h4 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

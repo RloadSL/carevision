@@ -16,6 +16,11 @@
     @extend %mainLayout;
     text-align: center;
   }
+
+  &_steps {
+    background-color: colors.$palette2;
+    margin-top: 6rem
+  }
   
   &_information {
     @extend %mainLayout;

@@ -1,5 +1,6 @@
 {
   "onlineDate.button.label": "Online Termin",
+  "getDateNow.button.label":"Jetzt Ihr Termin vereinbaren!",
   "contact.button.label": "Contact",
   "phoneNumber.button.label": "0800 8888 474",
   "loginNow.button.label": "Jetzt anmelden",
@@ -61,6 +62,25 @@
   "testimonials.option3.text":"<b>Carla Smith</b><span>Atleta Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
   "testimonials.option4.text":"<b>Sonia Smith</b><span>Cazadora Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
   "testimonials.option5.text":"<b>Teresa Smith</b><span>Agricultora Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
+
+  "steps.title": "<span>Ihre ersten Schritte in </span> ein brillenfreies Leben",
+  "steps.text": "Bei einem Besuch vor Ort erhalten Sie umfassende Untersuchungsergebnisse Ihrer Augen und wissen, ob und wenn ja mit welcher Behandlungsmethode Ihre Fehlsichtigkeit korrigiert werden kann.",
+  "steps.option1.title": "Augenmessungen",
+  "steps.option1.text": "Wir prüfen, ob Ihre Augen grundsätzlich für eine Laserkorrektur geeignet sein können.",
+  "steps.option2.title": "Ärztliche Voruntersuchung",
+  "steps.option2.text": "Wir vermessen jeden Millimeter Ihrer Augen und legen so den Grundstein für optimale Behandlungsergebnisse.",
+  "steps.option3.title": "Offene Fragen klären",
+  "steps.option3.text": "Sie haben die Möglichkeit, Ihrem behandelnden Facharzt alle noch offenen Fragen zu stellen.",
+
+
+
+
+
+
+
+
+
+
 
   "form.title": "<span>Kostenloses</span> Infopaket",
   "form.name.input.label":"Vorname",

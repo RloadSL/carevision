@@ -9,6 +9,7 @@ import videoConsultationBg from "../../../../public/img/clinic_bg.jpg";
 import TextApp from "@/components/TextApp";
 import Footer from "@/components/Footer";
 import ButtonApp from "@/components/ButtonApp";
+import Steps from "@/components/Steps";
 
 interface ClinicsProps {}
 
@@ -41,7 +42,9 @@ const Clinics: NextPage = (props: any) => {
         <section className={style.clinic_consultation}>
           <VideoConsultation bgImage={videoConsultationBg} />
         </section>
-        <div>cuadros</div>
+        <section className={style.clinic_steps}>
+          <Steps />
+        </section>
         <div>slider</div>
       </main>
 
