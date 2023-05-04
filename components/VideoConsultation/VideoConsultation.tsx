@@ -5,18 +5,23 @@ import style from "./video-consultation.module.scss";
 import arrow from "../../assets/img/arrow_icon.svg";
 import peopleRunning from "../../assets/img/videoConsultation.jpg";
 import Image from "next/image";
-import useComponentUtils from "@/hooks/component.hooks";
+import useComponentUtils from "@/ui/hooks/component.hooks";
 
-interface VideoConsultationProps {}
+interface VideoConsultationProps {
+  bgImage?: any;
+}
 
-const VideoConsultation = ({}: VideoConsultationProps) => {
+const VideoConsultation = ({ bgImage = peopleRunning }: VideoConsultationProps) => {
   const { useWindowSize } = useComponentUtils();
 
   //checking mobile size
   const isMobile = useWindowSize().width < 768 ? true : false;
 
   return (
-    <div className={style.videoConsultation}>
+    <div
+      className={style.videoConsultation}
+      style={{ backgroundImage: !isMobile ? `url(${bgImage.src})` : "none" }}
+    >
       <div className={style.videoConsultation_text}>
         <h2 className={style.title}>
           <TextApp labelID="videoConsultation.title" />
@@ -26,7 +31,7 @@ const VideoConsultation = ({}: VideoConsultationProps) => {
         </p>
         {isMobile && (
           <div className={style.img}>
-            <Image src={peopleRunning} alt={"People running on the beach"} />
+            <Image src={bgImage} alt={"People running on the beach"} />
           </div>
         )}
         <div className={style.videoConsultation_text_list}>

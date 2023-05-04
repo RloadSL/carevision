@@ -1,0 +1,80 @@
+@use "../../../../assets/styles/partials/placeholders" as placeholders;
+@use "../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../../assets/styles/partials/variables/colors" as colors;
+
+.clinic {
+  .title {
+    @extend %mainTitle;
+  }
+  &_testimonials {
+    @extend %mainLayout;
+    background-color: colors.$grey20;
+  }
+
+  &_maps {
+    @extend %mainLayout;
+    text-align: center;
+  }
+  
+  &_information {
+    @extend %mainLayout;
+    height: 320px;
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+
+    @include devices.device(tablet){
+      border-radius: 15px;
+      background: colors.$palette1;
+
+
+    }
+
+    &::before {
+      @extend %beforeAfter;
+      background: url(../../../../assets/img/clinic_info.png) no-repeat;
+      background-size: contain;
+      width: 430px;
+      height: 100%;
+      flex-shrink: 0;
+      display: none;
+
+      @include devices.device(tablet){
+        display: block;
+      }
+    }
+
+    &_content {
+      width: 90%;
+      margin: auto;
+
+      p {
+        color: white;
+      }
+
+      @include devices.device(tablet){
+        width: 70%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        margin: 0;
+      }
+
+      h3 {
+        font-weight: bold;
+        color: white;
+        font-size: 1.8rem;
+        margin: 0;
+        span {
+          color: colors.$main;
+          display: block;
+        }
+      }
+    }
+
+
+  }
+}

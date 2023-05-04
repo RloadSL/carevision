@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper";
 import style from "./hero.module.scss";
-import useComponentUtils from "@/hooks/component.hooks";
+import useComponentUtils from "@/ui/hooks/component.hooks";
 import Image from "next/image";
 import girl from "../../assets/img/hero1.jpg"
 

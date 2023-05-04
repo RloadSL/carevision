@@ -1,7 +1,7 @@
-@use "../../assets/styles/partials/placeholders" as placeholders;
-@use "../../assets/styles/partials/mixins/devices" as devices;
-@use "../../assets/styles/partials/mixins/layout" as layout;
-@use "../../assets/styles/partials/variables/colors" as colors;
+@use "../../../assets/styles/partials/placeholders" as placeholders;
+@use "../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../assets/styles/partials/variables/colors" as colors;
 
 %containerSection {
   position: relative;
@@ -37,7 +37,7 @@
 
     &::before {
       @extend %beforeAfter;
-      background: url(../../assets/img/info_bottom.png) no-repeat;
+      background: url(../../../assets/img/info_bottom.png) no-repeat;
       background-size: contain;
       width: 300px;
       height: 100%;

@@ -5,7 +5,7 @@ import TextApp from "../TextApp";
 import style from "./online-information.module.scss";
 import doctor from "../../assets/img/doctor_info.png";
 import arrow from "../../assets/img/arrow_icon.svg";
-import useComponentUtils from "@/hooks/component.hooks";
+import useComponentUtils from "@/ui/hooks/component.hooks";
 
 interface OnlineInformationProps {}
 

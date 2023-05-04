@@ -65,7 +65,6 @@ const Home: NextPage = () => {
               <ButtonApp labelID="loginNow.button.label" onClick={() => console.log("hola")} />
             </div>
           </div>
-          <div></div>
         </div>
         <Footer />
       </main>
