@@ -132,3 +132,15 @@
 		}
 	}
 }
+
+.impressions {
+	.swiper-slide {
+    width: auto!important;
+}
+
+	.swiper-slide:not(.swiper-slide-active) {
+		opacity: .1 !important;
+		transform: scale(.9) !important;
+
+	}
+}

@@ -10,6 +10,7 @@ import TextApp from "@/components/TextApp";
 import Footer from "@/components/Footer";
 import ButtonApp from "@/components/ButtonApp";
 import Steps from "@/components/Steps";
+import ImpressionsSlider from "@/components/ImpressionsSlider";
 
 interface ClinicsProps {}
 
@@ -45,7 +46,17 @@ const Clinics: NextPage = (props: any) => {
         <section className={style.clinic_steps}>
           <Steps />
         </section>
-        <div>slider</div>
+        <section className={style.clinic_impressions}>
+        <ImpressionsSlider textData={clinicData}/>
+        {/* <TextApp labelID="impressions" textData={clinicData} /> */}
+        {/* <TextApp labelID="impressions.title" textData={clinicData} /> */}
+
+
+
+          {/* <div className={style.clinic_impressions__slider}>
+            <ImpressionsSlider />
+          </div> */}
+        </section>
       </main>
 
       <section className={style.clinic_testimonials}>
@@ -54,10 +65,10 @@ const Clinics: NextPage = (props: any) => {
       <div className={style.clinic_information}>
         <div className={style.clinic_information_content}>
           <h3>
-          <TextApp labelID="infoBanner.title" textData={clinicData} />
+            <TextApp labelID="infoBanner.title" textData={clinicData} />
           </h3>
           <p>
-          <TextApp labelID="infoBanner.description" textData={clinicData} />
+            <TextApp labelID="infoBanner.description" textData={clinicData} />
           </p>
           <div>
             <ButtonApp labelID="loginNow.button.label" onClick={() => console.log("hola")} />

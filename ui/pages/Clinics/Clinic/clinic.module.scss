@@ -21,6 +21,17 @@
     background-color: colors.$palette2;
     margin-top: 6rem
   }
+
+  &_impressions {
+    overflow: hidden;
+    // display: flex;
+    // justify-content: flex-end;
+
+    // &__slider {
+    //   width: 1900px;
+    //   border: 1px solid pink
+    // }
+  }
   
   &_information {
     @extend %mainLayout;

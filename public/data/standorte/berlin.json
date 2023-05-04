@@ -4,8 +4,8 @@
 
   "infoBanner.title": "Interessiert an einer Augenlaser-<span>Behandlung in Berlin?</span>",
   "infoBanner.description": "Gerne beraten wir Sie in einem unverbindlichen Informationsgespräch über das Augenlasern. Vereinbaren Sie Ihren Wunschtermin über die Online-Terminvergabe.",
-  
-  "gallery.title": "<span>Impressionen</span> CARE Vision Berlin",
-  "gallery.text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, u",
-  "gallery.images":["image1.jpg","image2.jpg","image3.jpg"]
+
+  "impressions.title": "<span>Impressionen</span> CARE Vision Berlin",
+  "impressions.text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, u",
+  "impressions.images":["image1.jpg","image2.jpg","image3.jpg"]
 }

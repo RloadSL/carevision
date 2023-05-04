@@ -3,11 +3,12 @@ import { type } from "os";
 import React from "react";
 import TextApp from "../TextApp";
 import style from "./button-app.module.scss";
+import arrow from "../../assets/img/arrow_icon.svg"
 
 interface ButtonAppProps {
   labelID: string;
   onClick: Function;
-  icon?: string;
+  icon?: any;
   iconAlign?: "left" | "right";
   buttonType?: "button" | "submit" | "reset";
 }

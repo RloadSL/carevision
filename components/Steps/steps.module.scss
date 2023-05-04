@@ -18,64 +18,130 @@
     }
   }
 
-  &_list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    &__step1 {
-      .content {
-        &::before {
-          background-image: url(../../public/img/step1.svg);
-        }
-      }
+  &_screenLayout {
+    button {
+      max-width: fit-content !important;
+      margin: auto;
+      margin-top: 2rem;
     }
+    .list {
+      @include devices.device(tablet) {
+        display: flex;
+        justify-content: center;
+      }
 
-    &__step2 {
-      .content {
-        &::before {
-          background-image: url(../../public/img/step2.svg);
+      &__step1 {
+        .content {
+          &::before {
+            background-image: url(../../public/img/step1.svg);
+          }
+
+          &::after {
+            content: "1." !important;
+          }
         }
       }
-    }
 
-    &__step3 {
-      .content {
-        &::before {
-          background-image: url(../../public/img/step3.svg);
+      &__step2 {
+        .content {
+          &::before {
+            background-image: url(../../public/img/step2.svg);
+          }
+
+          &::after {
+            content: "2." !important;
+          }
         }
       }
-    }
 
-    li {
-      background-color: white;
-      padding: 2rem;
-      width: 28%;
-      margin: 0 1rem;
-      @extend %borderRadius;
+      &__step3 {
+        .content {
+          &::before {
+            background-image: url(../../public/img/step3.svg);
+          }
 
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
+          &::after {
+            content: "3." !important;
+          }
+        }
       }
 
-      .content {
-        color: colors.$main;
-        &::before {
-          @extend %beforeAfter;
-          background-color: colors.$palette2;
-          background-repeat: no-repeat;
-          background-position: center;
-          border-radius: 100%;
-          width: 120px;
-          height: 120px;
-          margin: auto;
+      li {
+        background-color: white;
+        padding: 2rem;
+        @extend %borderRadius;
+        z-index: 0;
+        position: relative;
+        margin-bottom: 1rem;
+
+        @include devices.device(tablet) {
+          width: 28%;
+          margin: 0 1rem;
+          margin-bottom: 0;
         }
 
-        h4 {
-          font-size: 1.2rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .content {
+          color: colors.$main;
+          display: flex;
+          text-align: left;
+
+          @include devices.device(tablet) {
+            flex-direction: column;
+            text-align: center;
+          }
+
+          &::before {
+            @extend %beforeAfter;
+            background-color: colors.$palette2;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            border-radius: 100%;
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            margin-right: 20px;
+
+            @include devices.device(tablet) {
+              width: 90px;
+              height: 90px;
+              margin: auto;
+              margin-bottom: 20px;
+            }
+
+            @include devices.device(smScreen) {
+              width: 120px;
+              height: 120px;
+            }
+          }
+
+          &::after {
+            @extend %beforeAfter;
+            position: absolute;
+            color: colors.$palette2;
+            font-weight: bold;
+            font-size: 8rem;
+            bottom: 0;
+            right: 20px;
+            z-index: -1;
+            height: auto;
+          }
+
+          h4 {
+            font-size: 1.2rem;
+            margin-top: 0;
+
+            @include devices.device(tablet) {
+              margin: inherit;
+            }
+          }
         }
       }
     }
