@@ -1,13 +1,13 @@
-@use '../../assets/styles/partials/placeholders' as placeholders;
-@use '../../assets/styles/partials/mixins/devices' as devices;
-@use '../../assets/styles/partials/mixins/layout' as layout;
-@use '../../assets/styles/partials/variables/colors' as colors;
+@use "../../assets/styles/partials/placeholders" as placeholders;
+@use "../../assets/styles/partials/mixins/devices" as devices;
+@use "../../assets/styles/partials/mixins/layout" as layout;
+@use "../../assets/styles/partials/variables/colors" as colors;
 
 .impressions {
-  margin: auto;
-  
+  margin: 8rem auto;
+  padding-left: 0.8rem;
 
-  @include devices.device(tablet) {
+  @include devices.device(smScreen) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -22,50 +22,102 @@
   }
 
   &_info {
-    width:100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
+    // @include devices.device(smScreen) {
+    //   padding-left: 5%;
+    // }
+
+    @include devices.device(mdScreen) {
+      padding-left: 2%;
+    }
+
+    @include devices.device(1400px) {
+      padding-left: 14%;
+    }
+
+    @include devices.device(2000px) {
+      padding-left: 25%;
+    }
+
     article {
-      width: 45%;
+      width: 100%;
+
       p {
-        max-width: 450px;
-        border: 1px solid red;
+        @include devices.device(smScreen) {
+          max-width: 400px;
+        }
       }
     }
   }
-  &_slider{
-  }
 
-  .slider{
+  .slider {
     display: flex;
     justify-content: flex-end;
     position: relative;
-    // width: 1400px;
-  
+
+    .bullet {
+      display: block;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      background-color: colors.$grey30;
+      margin-left: 5px;
+    }
+
     &_content {
-      width: 1200px;
       overflow: hidden;
-  
+
+      @include devices.device(smScreen) {
+        width: 600px;
+      }
+
+      @include devices.device(1400px) {
+        width: 700px;
+      }
+
+      @include devices.device(1700px) {
+        width: 1000px;
+      }
+
+      @include devices.device(2250px) {
+        width: 1200px;
+      }
+
       img {
-        border-radius: 20px;
-        height: 450px;
+        border-radius: 10px;
+        height: 200px;
         width: auto;
+
+        @include devices.device(tablet) {
+          height: 300px;
+        }
+
+        @include devices.device(lgScreen) {
+          border-radius: 20px;
+          height: 400px;
+        }
+
+        @include devices.device(1840px) {
+          border-radius: 20px;
+          height: 450px;
+        }
       }
     }
-  
+
     &_navigation {
       padding: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-  
-  
+
       &__prev {
         transform: rotate(180deg);
       }
-      
+
       button {
         display: block;
         width: 50px;
@@ -78,4 +130,3 @@
     }
   }
 }
-

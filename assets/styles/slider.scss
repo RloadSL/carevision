@@ -60,7 +60,6 @@
 			margin-right: 20px;
 		}
 
-
 		&:last-child {
 			white-space: nowrap;
 			width: fit-content;
@@ -92,9 +91,6 @@
 		@include devices.device(tablet) {
 			flex-direction: row-reverse !important;
 			justify-content: space-between;
-		}
-
-		&-wrapper {
 		}
 
 		&-pagination {
@@ -135,12 +131,38 @@
 
 .impressions {
 	.swiper-slide {
-    width: auto!important;
-}
+		width: auto !important;
+	}
+
+	.swiper {
+		position: relative;
+		&-wrapper {
+			margin-bottom: 20px;
+		}
+		&-pagination {
+			margin-bottom: 0px;
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			width: 100%;
+
+			@include devices.device(smScreen) {
+				display: none !important;
+			}
+
+			&-bullet-active {
+				background-color: colors.$main !important;
+			}
+
+
+		}
+
+	}
+
+	
 
 	.swiper-slide:not(.swiper-slide-active) {
-		opacity: .1 !important;
-		transform: scale(.9) !important;
-
+		opacity: 0.1 !important;
+		transform: scale(0.9) !important;
 	}
 }
