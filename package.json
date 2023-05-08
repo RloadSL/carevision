@@ -24,6 +24,7 @@
     "react-before-after-slider-component": "^1.1.6",
     "react-dom": "18.2.0",
     "sass": "^1.61.0",
+    "sharp": "^0.32.1",
     "swiper": "^9.2.0",
     "typescript": "5.0.4",
     "yup": "^1.1.1"
