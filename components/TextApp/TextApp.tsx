@@ -13,7 +13,8 @@ interface TextAppProps {
  */
 
 const TextApp = ({ labelID, textData = appData }: TextAppProps) => {
-  return <>{parse(textData[labelID])}</>;
+  const dataParse = textData[labelID] as string
+  return <>{parse(dataParse || '')}</>;
 };
 
 export default TextApp;

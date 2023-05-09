@@ -29,6 +29,7 @@ const Header = ({ displayModal }: HeaderProps) => {
   const { mobileNavAnimation, toggleMobileNav } = useComponentAnimations();
 
   useEffect(() => {
+    console.log(menuData);
     mobileNavAnimation();
   }, []);
 
@@ -88,8 +89,8 @@ const Header = ({ displayModal }: HeaderProps) => {
               {menuData.map((item, index: number) => {
                 return (
                   <li className={`${style.header_menu__item} li-menu`} key={index}>
-                    <Link href={`/${item}`} onClick={toggleMobileNav}>
-                      <span>{item}</span>
+                    <Link href={`${item.url}`} onClick={toggleMobileNav}>
+                        <span>{item.label}</span>
                     </Link>
                   </li>
                 );

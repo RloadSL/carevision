@@ -125,6 +125,7 @@
 
   &_video {
     position: relative;
+    margin-top: 0rem;
     &::before {
       @extend %beforeAfter;
       background-color: white;

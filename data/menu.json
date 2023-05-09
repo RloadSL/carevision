@@ -1,9 +1,27 @@
 
 [
-  "Augen Lasern",
-  "Linsenimplantation",
-  "Kosten",
-  "Standorte",
-  "Ärzte",
-  "Über Care Vision"
+  {
+    "label":"Augen Lasern",
+    "url": "/augen-lasern"
+  },
+  {
+    "label":"Linsenimplantation",
+    "url": "/linsenimplantation"
+  },
+  {
+    "label":"Kosten",
+    "url": "/kosten"
+  },
+  {
+    "label":"Standorte",
+    "url": "/standorte"
+  },
+  {
+    "label":"Ärzte",
+    "url": "/arzte"
+  },
+  {
+    "label":"Über Care Vision",
+    "url": "/uber-care-vision"
+  }
 ]

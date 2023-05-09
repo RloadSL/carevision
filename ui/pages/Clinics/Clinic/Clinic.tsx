@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import SEOHead from "@/components/SEOHead";
 import Testimonials from "@/components/Testimonials";
 import VideoConsultation from "@/components/VideoConsultation";
 import { NextPage } from "next";
@@ -7,33 +6,39 @@ import React, { useEffect, useState } from "react";
 import style from "./clinic.module.scss";
 import videoConsultationBg from "../../../../public/img/clinic_bg.jpg";
 import TextApp from "@/components/TextApp";
-import Footer from "@/components/Footer";
 import ButtonApp from "@/components/ButtonApp";
 import Steps from "@/components/Steps";
 import ImpressionsSlider from "@/components/ImpressionsSlider";
+import SEOHeader from "@/components/SEOHeader/SEOHeader";
+import { useRouter } from "next/router";
 
-interface ClinicsProps {}
 
 const Clinics: NextPage = (props: any) => {
-  const [clinicData] = useState(props.clinic);
-  useEffect(() => {
-    //console.log(JSON.stringify(clinicData));
-  }, [clinicData]);
+  const { query } = useRouter();
 
   return (
     <div className={style.clinic}>
-      <SEOHead title="CareVision" description="Here the SEO description of the page" />
+      <SEOHeader title="CareVision" description="Here the SEO description of the page" />
       <main>
         <section className={style.clinic_hero}>
-          <Hero />
+          <Hero
+            textData={props.clinic[query.clinic as string]}
+            bgImage=""
+            title={"title"}
+            sliderTextList={[
+              "home.hero.slider.text1",
+              "home.hero.slider.text2",
+              "home.hero.slider.text3"
+            ]}
+          />{" "}
         </section>
         <section className={style.clinic_maps}>
           <article className={style.iconsSection_top}>
             <h2 className={style.title}>
-              <TextApp labelID="title" textData={clinicData} />
+              <TextApp labelID="title" textData={props.clinic[query.clinic as string]} />
             </h2>
             <p>
-              <TextApp labelID="description" textData={clinicData} />
+              <TextApp labelID="description" textData={props.clinic[query.clinic as string]} />
             </p>
           </article>
           <div>
@@ -47,15 +52,7 @@ const Clinics: NextPage = (props: any) => {
           <Steps />
         </section>
         <section className={style.clinic_impressions}>
-        <ImpressionsSlider textData={clinicData}/>
-        {/* <TextApp labelID="impressions" textData={clinicData} /> */}
-        {/* <TextApp labelID="impressions.title" textData={clinicData} /> */}
-
-
-
-          {/* <div className={style.clinic_impressions__slider}>
-            <ImpressionsSlider />
-          </div> */}
+          <ImpressionsSlider textData={props.clinic[query.clinic as string]} />
         </section>
       </main>
 
@@ -65,17 +62,16 @@ const Clinics: NextPage = (props: any) => {
       <div className={style.clinic_information}>
         <div className={style.clinic_information_content}>
           <h3>
-            <TextApp labelID="infoBanner.title" textData={clinicData} />
+            <TextApp labelID="infoBanner.title" textData={props.clinic[query.clinic as string]} />
           </h3>
           <p>
-            <TextApp labelID="infoBanner.description" textData={clinicData} />
+            <TextApp labelID="infoBanner.description" textData={props.clinic[query.clinic as string]} />
           </p>
           <div>
             <ButtonApp labelID="loginNow.button.label" onClick={() => console.log("hola")} />
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

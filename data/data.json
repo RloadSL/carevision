@@ -11,11 +11,11 @@
   "customerService.submenu.label": "<span>Kostenfreie</span> Servicenummer",
   "emailContact.submenu.label": "<span>Infos</span> anfordern",
 
-  "hero.title":"<span>Lorem ipsum dolor sit</span> Cras pellentesque",
-  "hero.price":"602<span>€</span>",
-  "hero.slider.text1":"Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
-  "hero.slider.text2":"TEXTO 2. Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
-  "hero.slider.text3":"TEXTO 3. Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
+  "home.hero.title":"<span>Home ipsum dolor sit</span> Cras pellentesque",
+  "home.hero.price":"602<span>€</span>",
+  "home.hero.slider.text1":"Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
+  "home.hero.slider.text2":"TEXTO 2. Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
+  "home.hero.slider.text3":"TEXTO 3. Schnell und einfach – ganz ohne Wartezeit und Anfahrt",
 
 
   "iconsSection.title": "<span>Gute Gründe für</span> CARE Vision",

@@ -1,35 +1,35 @@
 import React from "react";
 import ContactForm from "../ContactForm";
 import TextApp from "../TextApp";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Pagination } from "swiper";
 import style from "./hero.module.scss";
 import useComponentUtils from "@/ui/hooks/component.hooks";
 import Image from "next/image";
-import girl from "../../assets/img/hero1.jpg"
+import girl from "../../assets/img/hero1.jpg";
 
 interface HeroProps {
+  bgImage?: string;
+  textData?: any;
+  title?: any;
+  sliderTextList: Array<string>
 }
 
-const Hero = ({}: HeroProps) => {
-  const { useScrollDistance, useWindowSize } = useComponentUtils();
+const Hero = ({ bgImage, title, textData, sliderTextList }: HeroProps) => {
+  const { useWindowSize } = useComponentUtils();
 
-  //checking mobile menu
+  //checking mobile
   const isMobile = useWindowSize().width <= 768 ? true : false;
 
   return (
     <div className={style.hero}>
-      <div aria-hidden={true}  className={style.hero_image}>
-      </div>
+      <div aria-hidden={true} className={style.hero_image}></div>
       <div className={style.container}>
         <div className={style.hero_info}>
           <div className={style.hero_info__left}>
             <div className={style.hero_info_text}>
               <h1 className={style.title}>
-                <TextApp labelID="hero.title" />
+                <TextApp labelID={title} textData={textData}/>
               </h1>
               <div className={style.price}>
                 <TextApp labelID="hero.price" />
@@ -47,17 +47,17 @@ const Hero = ({}: HeroProps) => {
               >
                 <SwiperSlide>
                   <p>
-                    <TextApp labelID="hero.slider.text1" />
+                    <TextApp labelID={sliderTextList[0]} />
                   </p>
                 </SwiperSlide>
                 <SwiperSlide>
                   <p>
-                    <TextApp labelID="hero.slider.text2" />
+                  <TextApp labelID={sliderTextList[1]} />
                   </p>
                 </SwiperSlide>
                 <SwiperSlide>
                   <p>
-                    <TextApp labelID="hero.slider.text3" />
+                  <TextApp labelID={sliderTextList[2]} />
                   </p>
                 </SwiperSlide>
               </Swiper>

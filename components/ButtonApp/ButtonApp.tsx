@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { type } from "os";
 import React from "react";
 import TextApp from "../TextApp";
 import style from "./button-app.module.scss";

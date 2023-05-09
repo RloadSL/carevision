@@ -1,39 +1,41 @@
-@use "../../assets/styles/partials/placeholders" as placeholders;
-@use "../../assets/styles/partials/mixins/devices" as devices;
-@use "../../assets/styles/partials/mixins/layout" as layout;
-@use "../../assets/styles/partials/variables/colors" as colors;
+@use '../../assets/styles/partials/placeholders' as placeholders;
+@use '../../assets/styles/partials/mixins/devices' as devices;
+@use '../../assets/styles/partials/mixins/layout' as layout;
+@use '../../assets/styles/partials/variables/colors' as colors;
 
-.content {
+
+.visualDiseases {
   @extend %mainLayout;
 
-  &_top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 2rem;
+  .bullet {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 100px;
+    width: fit-content;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
 
     @include devices.device(smScreen) {
-      flex-wrap: nowrap;
-      justify-content: center;
-
-    }
-
-    button {
-      padding: 1.2rem;
-      font-size: 0.9rem;
-      border-radius: 100px;
-      width: fit-content;
-      background-color: white;
-      margin-left: 10px;
-      margin-right: 10px;
-
-      @include devices.device(smScreen) {
-        min-width: fit-content;
-        padding: 1.5rem;
-
-      }
+      min-width: fit-content;
+      padding: 1.5rem;
     }
   }
+
+  // &_top {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   margin-bottom: 2rem;
+
+  //   @include devices.device(smScreen) {
+  //     flex-wrap: nowrap;
+  //     justify-content: center;
+
+  //   }
+
+    
+  // }
 
   &_bottom {
     @include devices.device(smScreen) {
@@ -89,3 +91,4 @@
   background-color: colors.$palette1 !important;
   color: white !important;
 }
+

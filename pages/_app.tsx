@@ -6,12 +6,16 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useState } from "react";
 import "../assets/styles/layout.scss";
-import {Lato} from '@next/font/google'
+import { Lato } from "next/font/google";
+import Footer from "@/components/Footer";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
 
 const lato = Lato({
-  subsets: ['latin'],
-  weight:['400','300','700']
-})
+  subsets: ["latin"],
+  weight: ["400", "300", "700"]
+});
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -38,6 +42,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           </div>
         </Modal>
       )}
+      <Footer />
     </div>
   );
 };

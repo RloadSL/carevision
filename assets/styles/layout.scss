@@ -230,4 +230,26 @@ canvas {
 	box-shadow: none;
 }
 
+.before-after-slider__delimiter-icon {
+	background-color: rgba(white, .5) !important;
+	width: 90px !important;
+	height: 90px !important;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+	&::after {
+		@extend %beforeAfter;
+		background-image: url(../../public/img/icons/arrows_beforeAfter.svg);
+		background-color: colors.$palette1 !important;
+		background-size: 60%;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 65px;
+		width: 65px;
+		border-radius: 100%;
+	}
+
+	
+}
 

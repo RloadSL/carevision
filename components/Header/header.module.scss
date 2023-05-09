@@ -108,6 +108,7 @@
 
   .menu {
     @extend %mainLayout;
+    padding: 0;
     padding-right: 1rem;
 
     ul {
@@ -115,25 +116,24 @@
       align-items: center;
       justify-content: space-between;
       height: auto !important;
-      padding: 0.2rem;
       width: 100%;
 
       li {
-        padding-right: 2rem;
         opacity: 1 !important;
         transform: none !important;
         font-size: 0.9rem;
-
-        &:last-child {
-          padding: 0px;
-        }
       }
 
       a {
         display: inline-block;
+        padding: 1rem;
+
 
         &:hover {
-          color: colors.$palette2;
+          background-color: colors.$palette1;
+           span {
+            color: white !important;
+           }
         }
       }
     }

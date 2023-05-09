@@ -1,8 +1,5 @@
-import Image from "next/image";
 import React, { useState } from "react";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Pagination } from "swiper";
 import ButtonApp from "../ButtonApp";

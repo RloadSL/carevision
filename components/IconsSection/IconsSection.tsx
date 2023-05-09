@@ -12,7 +12,6 @@ Component to an icon item with text and image
  */
 
 const IconBlock = ({ iconText }: IconBlock) => {
-  console.log(iconText);
   return (
     <div className={style.itemBlock}>
       <div className={style.itemBlock_content}>

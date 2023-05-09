@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import style from "./footer.module.scss";
 import logo from "../../assets/img/logo.svg";
-import instagram from "../../assets/img/instagram.svg";
-import facebook from "../../assets/img/facebook.svg";
-import linkedin from "../../assets/img/linked.svg";
-import youtube from "../../assets/img/youtube.svg";
-import xing from "../../assets/img/xing.svg";
-import ekomi from "../../assets/img/ekomi.png";
-import tuv from "../../assets/img/tuv.png";
+import instagram from "../../public/img/icons/instagram.svg";
+import facebook from "../../public/img/icons/facebook.svg";
+import linkedin from "../../public/img/icons/linked.svg";
+import youtube from "../../public/img/icons/youtube.svg";
+import xing from "../../public/img/icons/xing.svg";
+import ekomi from "../../public/img/ekomi.png";
+import tuv from "../../public/img/tuv.png";
 import Link from "next/link";
 
 /**
@@ -34,7 +34,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href={"#"}>
-                <Image src={facebook} alt={"Facebook"} />
+                <Image src={facebook} alt={"facebook"}  />
               </Link>
             </li>
             <li>

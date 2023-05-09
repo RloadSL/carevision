@@ -31,6 +31,12 @@
 	flex-direction: column-reverse;
 }
 
+.visualDiseases {
+	.swiper-pagination {
+		text-align: center;
+	}
+}
+
 .treatments {
 	.swiper-pagination {
 		display: flex;
