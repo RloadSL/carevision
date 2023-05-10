@@ -1,0 +1,90 @@
+@use "../../../../../assets/styles/partials/placeholders" as placeholders;
+@use "../../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../../../assets/styles/partials/variables/colors" as colors;
+
+.treatmentPriceBlock {
+  margin: 6rem auto;
+
+  .centeredContainer {
+    @extend %mainLayout;
+    text-align: center;
+
+    button {
+      margin: auto;
+    }
+  }
+
+  &_price {
+    @extend %mainLayout;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    margin-left: 10%;
+    position: relative;
+
+    &_image {
+      width: 60%;
+    }
+
+    &_text {
+      width: 35%;
+      background-color: white;
+      position: absolute;
+      left: 40%;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: rgba(0, 153, 217, 0.2) 0px 3px 30px 0px;
+
+      &::after {
+        @extend %beforeAfter;
+        background: url(../../../../../public/img/icons/check_list.svg) no-repeat;
+        background-size: 70%;
+        background-position: center;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        bottom: -48px;
+        box-shadow: 0 0 0 1px #94b8dc;
+        border-radius: 100%;
+        padding: 1rem;
+      }
+
+      h2 {
+        text-transform: uppercase;
+        color: colors.$main;
+        margin-top: 0;
+        font-size: 2rem;
+
+        span {
+          display: block;
+          text-transform: none !important;
+          font-weight: normal;
+          color: colors.$palette3;
+          font-size: 1.5rem;
+
+          b {
+            font-size: 3rem;
+          }
+        }
+
+        small {
+          text-transform: none;
+          font-weight: normal;
+          font-size: 1rem;
+        }
+      }
+
+      button {
+        margin: 2rem auto;
+      }
+    }
+  }
+}

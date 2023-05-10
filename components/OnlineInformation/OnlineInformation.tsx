@@ -7,12 +7,14 @@ import doctor from "../../assets/img/doctor_info.png";
 import arrow from "../../assets/img/arrow_icon.svg";
 import useComponentUtils from "@/ui/hooks/component.hooks";
 
-interface OnlineInformationProps {}
+interface OnlineInformationProps {
+  bgImage?: any;
+}
 
-const OnlineInformation = ({}: OnlineInformationProps) => {
+const OnlineInformation = ({ bgImage }: OnlineInformationProps) => {
   const { useWindowSize } = useComponentUtils();
 
-  //checking mobile size
+  //checking mobile
   const isMobile = useWindowSize().width <= 768 ? true : false;
 
   return (
@@ -23,7 +25,7 @@ const OnlineInformation = ({}: OnlineInformationProps) => {
             <TextApp labelID="onlineInformation.title" />
           </h2>
         )}
-        <Image src={doctor} alt={"Doctor Mohamad Bdoura"} />
+        <Image src={bgImage} alt={"Doctor Mohamad Bdoura"} />
       </div>
       <div className={style.onlineInformation_text}>
         {!isMobile && (
@@ -34,7 +36,11 @@ const OnlineInformation = ({}: OnlineInformationProps) => {
         <div>
           <TextApp labelID="onlineInformation.text" />
         </div>
-        <ButtonApp icon={arrow} labelID="registerNow.button.label" onClick={() => console.log("hola")} />
+        <ButtonApp
+          icon={arrow}
+          labelID="registerNow.button.label"
+          onClick={() => console.log("hola")}
+        />
       </div>
     </div>
   );

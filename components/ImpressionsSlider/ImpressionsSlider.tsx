@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import style from "./impressions-slider.module.scss";
-import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import TextApp from "../TextApp";
@@ -65,8 +64,9 @@ const ImpressionsSlider = ({ textData }: ImpressionsSliderProps) => {
         <div className={style.slider_content}>
           <Swiper
             // spaceBetween={5}
-            //centeredSlides={false}
+            centeredSlides
             // loopedSlides={8}
+            loop
             slidesPerView={"auto"}
             pagination={pagination}
             onSwiper={(swiper) => setSwiper(swiper)}

@@ -12,16 +12,20 @@ import Treatments from "@/components/Treatments";
 import OnlineInformation from "@/components/OnlineInformation";
 import Testimonials from "@/components/Testimonials";
 import ButtonApp from "@/components/ButtonApp";
-
+import doctor from "../../../../public/img/girl_doctor.png"
+import TreatmentPriceBlock from "./TreatmentPriceBlock";
+import TreatmentSliderBlock from "./TreatmentSliderBlock";
 
 interface TreatmentProps {}
 
 const Treatment: NextPage = (props: any) => {
   const { query } = useRouter();
+  // useEffect(() => {
+  //   alert("cambia el texto")
+  // }, [props])
   return (
     <div className={style.treatment}>
       <SEOHeader title="AugenLasern" description="Here the SEO description of the page" />
-      {/* <TextApp labelID="title" textData={props.treatment[query.treatment as string]} /> */}
       <main>
         <section className={style.treatment_hero}>
           <Hero
@@ -35,16 +39,18 @@ const Treatment: NextPage = (props: any) => {
             ]}
           />
         </section>
-        <section className={style.home_treatments}>
+        <section className={style.treatment_treatments}>
           <Treatments />
         </section>
         <section className={style.treatment_consultation}>
           <VideoConsultation bgImage={videoConsultationBg} />
         </section>
-        <section>chico rubio</section>
-        <section>slider</section>
-        <section className={style.home_doctor}>
-          <OnlineInformation />
+        <section>
+          <TreatmentPriceBlock textData={props.treatment[query.treatment as string]}/>
+          <TreatmentSliderBlock textData={props.treatment[query.treatment as string]}/>
+        </section>
+        <section className={style.treatment_doctor}>
+          <OnlineInformation bgImage={doctor} />
         </section>
       </main>
       <section className={style.treatment_testimonials}>

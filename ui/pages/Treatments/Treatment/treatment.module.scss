@@ -9,6 +9,12 @@
     background-color: colors.$grey20;
   }
 
+  &_treatments {
+    margin: 6rem auto;
+    background-color: colors.$palette2;
+    padding-top: 2rem;
+  }
+
   &_information {
     @extend %mainLayout;
     height: 320px;

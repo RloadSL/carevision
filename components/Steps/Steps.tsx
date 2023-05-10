@@ -1,10 +1,5 @@
 import React, { useState } from "react";
 import style from "./steps.module.scss";
-// import "swiper/css";
-// import "swiper/css/effect-fade";
-// import "swiper/css/navigation";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { EffectFade, Pagination } from "swiper";
 import ButtonApp from "../ButtonApp";
 import TextApp from "../TextApp";
 import Image from "next/image";

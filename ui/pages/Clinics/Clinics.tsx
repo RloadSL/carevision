@@ -8,10 +8,10 @@ interface ClinicsProps {
 const Clinics = ({}: ClinicsProps) => {
   return (
     <div>
-      <Link href="standorte/berlin">
+      <Link href="/standorte/berlin">
       Berlin
       </Link>
-      <Link href="standorte/frankfurt">
+      <Link href="/standorte/frankfurt">
       Frankfurt
       </Link>
     </div>

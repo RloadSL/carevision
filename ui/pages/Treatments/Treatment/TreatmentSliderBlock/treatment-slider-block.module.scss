@@ -1,0 +1,40 @@
+@use '../../../../../assets/styles/partials/placeholders' as placeholders;
+@use '../../../../../assets/styles/partials/mixins/devices' as devices;
+@use '../../../../../assets/styles/partials/mixins/layout' as layout;
+@use '../../../../../assets/styles/partials/variables/colors' as colors;
+
+.treatmentSliderBlock {
+  background-color: colors.$palette2;
+  padding: 1rem;
+
+  @include devices.device(tablet) {
+    padding: 0;
+  }
+
+  .centeredContainer {
+    @extend %mainLayout;
+    text-align: center;
+
+    button {
+      margin: auto;
+    }
+  }
+
+  .slide_content {
+    display: flex;
+
+    &__image {
+      width: 55%;
+      display: none;
+
+      @include devices.device(tablet) {
+        display: block;
+      }
+    }
+
+    &__text {
+      width: 30%;
+
+    }
+  }
+}
