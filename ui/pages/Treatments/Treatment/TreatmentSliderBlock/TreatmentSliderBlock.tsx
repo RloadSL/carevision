@@ -26,20 +26,20 @@ const TreatmentSliderBlock = ({ textData }: TreatmentSliderBlockProps) => {
   const [swiper, setSwiper] = useState<any>();
   const pagination = {
     clickable: true,
-    bulletClass: "bullet",
-    renderBullet: (index: number, className: any) => {
-      return `<div aria-hidden=true class="${className} ${style.bullet}"></div>`;
-    }
+    // bulletClass: "bullet",
+    // renderBullet: (index: number, className: any) => {
+    //   return `<div aria-hidden=true class="${className} ${style.bullet}"></div>`;
+    // }
   };
   return (
     <div className={style.treatmentSliderBlock}>
       <div className={style.centeredContainer}>
         <article className={style.iconsSection_top}>
           <h2 className={style.title}>
-            <TextApp labelID="iconsSection.title" />
+          <TextApp labelID="treatmentSlider.title" textData={textData}/>
           </h2>
           <p>
-            <TextApp labelID="iconsSection.text" />
+          <TextApp labelID="treatmentSlider.description" textData={textData}/>
           </p>
         </article>
       </div>
@@ -56,14 +56,13 @@ const TreatmentSliderBlock = ({ textData }: TreatmentSliderBlockProps) => {
         spaceBetween={20}
         slidesPerView={deviceWidth === 'bigDevice' ? 1.65 : deviceWidth === 'mediumDevice' ? 1.2 : 1}
         centeredSlides
-        pagination={{ clickable: true }}
+        pagination={pagination}
         onSwiper={(swiper) => {
           console.log(swiper);
           setSwiper(swiper);
         }}
         onSlideChange={() => console.log("slide change")}
-        modules={[Navigation]}
-        effect="fade"
+        modules={[Navigation, Pagination]}
       >
         <SwiperSlide>
           <div className={`${style.slide_content} ${style.step1}`}>

@@ -1,7 +1,7 @@
-@use '../../../../../assets/styles/partials/placeholders' as placeholders;
-@use '../../../../../assets/styles/partials/mixins/devices' as devices;
-@use '../../../../../assets/styles/partials/mixins/layout' as layout;
-@use '../../../../../assets/styles/partials/variables/colors' as colors;
+@use "../../../../../assets/styles/partials/placeholders" as placeholders;
+@use "../../../../../assets/styles/partials/mixins/devices" as devices;
+@use "../../../../../assets/styles/partials/mixins/layout" as layout;
+@use "../../../../../assets/styles/partials/variables/colors" as colors;
 
 .treatmentSliderBlock {
   background-color: colors.$palette2;
@@ -9,6 +9,14 @@
 
   @include devices.device(tablet) {
     padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem
+  }
+
+  .title {
+    @extend %mainTitle;
+    max-width: 550px;
+    margin: auto
   }
 
   .centeredContainer {
@@ -33,8 +41,31 @@
     }
 
     &__text {
-      width: 30%;
+      width: 45%;
+    }
+  }
+}
 
+.step1 {
+  .slide_content__text {
+    display: flex;
+    justify-content: space-between;
+    div {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    &::before {
+      @extend %beforeAfter;
+      content: "1.";
+      width: 30%;
+      color: colors.$main;
+      font-size: 10rem;
+      font-weight: lighter;
+      height: auto;
+      margin-top: -5%;
+      margin-left: 5%;
     }
   }
 }
