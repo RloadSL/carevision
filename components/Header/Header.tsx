@@ -61,11 +61,11 @@ const Header = ({ displayModal }: HeaderProps) => {
           <div className={style.phone}>
             <TextApp labelID="phoneNumber.button.label" />
           </div>
-          <div>
+          <div className={style.onlineDate}>
             <ButtonApp
               icon={calendarIcon}
               iconAlign="left"
-              labelID="onlineDate.button.label"
+              labelID="getDate.button.label"
               onClick={() => console.log("hola")}
             />
           </div>

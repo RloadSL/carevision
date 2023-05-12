@@ -29,6 +29,7 @@
     &_list {
       font-size: 1rem;
       color: colors.$main;
+      margin-bottom: 20px;
 
       span {
         display: block;
@@ -58,6 +59,10 @@
         }
       }
     }
+  }
+
+  button {
+    max-width: 350px;
   }
 }
 

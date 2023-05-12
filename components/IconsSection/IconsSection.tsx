@@ -19,7 +19,6 @@ const IconBlock = ({ iconText }: IconBlock) => {
           <span>
             <TextApp labelID={iconText} />
           </span>
-          <span>lorem</span>
         </div>
       </div>
     </div>

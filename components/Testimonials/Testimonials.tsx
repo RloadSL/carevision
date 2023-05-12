@@ -5,7 +5,10 @@ import { EffectFade, Pagination } from "swiper";
 import ButtonApp from "../ButtonApp";
 import TextApp from "../TextApp";
 import style from "./testimonials.module.scss";
-import woman from "../../assets/img/treatments.jpg";
+import woman from "../../public/img/home/woman.jpg";
+import man from "../../public/img/home/man.jpg";
+import oldWoman from "../../public/img/home/old_woman.jpg";
+
 import testimonials from "../../data/testimonials.json";
 import helenThumb from "../../assets/img/testimonials/testi_thumb1.png";
 import charlieThumb from "../../assets/img/testimonials/testi_thumb2.png";
@@ -57,7 +60,7 @@ const Testimonials = ({}: TestimonialsProps) => {
             <SwiperSlide>
               <div className={`${style.tabs_content} ${style.item1}`}>
                 <div className={style.tabs_content__image}>
-                  <Image src={woman} alt={""} />
+                  <Image src={woman} alt={"A woman smiling"} />
                 </div>
                 <div className={style.tabs_content__text}>
                   <h3>

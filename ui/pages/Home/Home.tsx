@@ -12,7 +12,7 @@ import OnlineInformation from "@/components/OnlineInformation";
 import Testimonials from "@/components/Testimonials";
 import Hero from "@/components/Hero";
 import VisualDiseasesTabs from "@/components/VisualDiseasesTabs/VisualDiseasesTabs";
-import doctor from "../../../public/img/boy_doctor.png"
+import doctor from "../../../public/img/home/doctor_carevision.png"
 
 /**
  * Home page structure component. Includes the SEO header and each of the sections that build the UI of the page

@@ -1,18 +1,18 @@
 [
   {
-    "buttonLabel": "Ich bin kurzsichtig",
+    "buttonLabel": "Kurzsichtigkeit",
     "img": "kurzsichtig",
     "img2": "kurzsichtig_2",
     "text": "option1"
   },
   {
-    "buttonLabel": "Ich bin weitsichtig",
+    "buttonLabel": "Weitsichtigkeit",
     "img": "weitsichtig",
     "img2": "weitsichtig_2",
     "text": "option2"
   },
   {
-    "buttonLabel": "Ich habe eine Hornhautverkrümmung",
+    "buttonLabel": "Hornhautverkrümmung",
     "img": "hornhautverkrummung",
     "img2": "hornhautverkrummung_2",
     "text": "option3"

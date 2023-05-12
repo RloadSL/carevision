@@ -39,7 +39,7 @@ const VideoConsultation = ({ bgImage = peopleRunning }: VideoConsultationProps) 
         </div>
         <div>
           <ButtonApp
-            labelID="learnMore.button.label"
+            labelID="arrangeVideoConsultation.button.label"
             onClick={() => console.log("hola")}
             icon={arrow}
             iconAlign="right"
