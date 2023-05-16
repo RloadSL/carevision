@@ -16,6 +16,14 @@
   &_content {
     display: flex;
     margin-top: 2rem;
+    padding: 20px;
+    min-height: 400px;
+  
+    @include devices.device(tablet) {
+      background: none !important;
+      padding: 0 !important;
+      min-height: auto !important;
+    }
 
     &__image {
       display: none;
@@ -71,14 +79,16 @@
 }
 
 .item1 {
-  background-image: url(../../assets/img/treatments_tab1.jpg);
+  background-image: url(../../public/img/treatments_tab1.jpg);
   background-size: cover;
-  padding: 20px;
-  min-height: 400px;
+}
 
-  @include devices.device(tablet) {
-    background: none;
-    padding: 0;
-    min-height: auto;
-  }
+.item2 {
+  background-image: url(../../public/img/treatments_tab2.jpg);
+  background-size: cover;
+}
+
+.item3 {
+  background-image: url(../../public/img/treatments_tab3.jpg);
+  background-size: cover;
 }

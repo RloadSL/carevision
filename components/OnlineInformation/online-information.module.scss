@@ -32,6 +32,7 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    margin-bottom: 70px;
 
     @include devices.device(tablet) {
       width: 100%;
@@ -88,9 +89,17 @@
       }
 
       &.bubble1 {
-        left: 5%;
-        bottom: 20%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 0%;
         min-width: 250px;
+
+        @include devices.device(tablet) {
+          left: 5%;
+          bottom: 20%;
+          right: inherit;
+        }
 
         @include devices.device(smScreen) {
           left: 15%;
@@ -152,7 +161,7 @@
       width: 80%;
     }
     @include devices.device(smScreen) {
-      padding-left:5%;
+      padding-left: 5%;
       width: 30%;
       text-align: left;
     }

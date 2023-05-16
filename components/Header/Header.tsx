@@ -36,6 +36,8 @@ const Header = ({ displayModal }: HeaderProps) => {
   //checking mobile menu
   const isMobile = useWindowSize().width <= 768 ? true : false;
 
+  // console.log(useScrollDistance())
+
   const [scroll, setScroll] = useState<boolean>(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -45,7 +47,7 @@ const Header = ({ displayModal }: HeaderProps) => {
 
   return (
     <div className={`${style.header} ${style[isMobile ? "mobile" : "pc"]} navigation`}>
-      <button className={style.fixedButton}>
+      <button className={style.fixedButton} style={useScrollDistance() > 400 ? {transform:'translateX(-100px)'} : {transform:'translateX(0px)'}}>
         online termin
       </button>
       <header>

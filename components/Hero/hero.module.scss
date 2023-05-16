@@ -34,11 +34,16 @@
 
   &_image {
     height: 70vh;
-    background: url(../../assets/img/hero1.jpg);
+    background: url(../../public/img/home/hero_sm.jpg) no-repeat #d3dce5;
+    background-position: center 25%;
     background-size: cover;
+
 
     @include devices.device(tablet) {
       height: 45vh;
+      background: url(../../public/img/home/hero.jpg) no-repeat #d3dce5;
+      background-position: center 25%;
+      background-size: cover;
     }
 
     @include devices.device(smScreen) {
@@ -149,3 +154,5 @@
     color: colors.$palette1;
   }
 }
+
+

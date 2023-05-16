@@ -13,10 +13,30 @@ import testimonials from "../../data/testimonials.json";
 import helenThumb from "../../assets/img/testimonials/testi_thumb1.png";
 import charlieThumb from "../../assets/img/testimonials/testi_thumb2.png";
 import CarlaThumb from "../../assets/img/testimonials/testi_thumb3.png";
+import useComponentUtils from "@/ui/hooks/component.hooks";
 
 interface TestimonialsProps {}
 
 const Testimonials = ({}: TestimonialsProps) => {
+  const { useWindowSize } = useComponentUtils();
+
+  //checking mobile
+  const isMobile = useWindowSize().width <= 768 ? true : false;
+
+  const renderPatientText = (option:number) => {
+    if(isMobile) {
+      return (
+        <div className={style.tabs_content__text}>
+        <h3>
+          <TextApp labelID={`treatments.option${option}.label`} />
+        </h3>
+        <p>
+          <TextApp labelID={`treatments.option${option}.text`} />
+        </p>
+      </div>
+      )
+    }
+  }
   const [swiper, setSwiper] = useState<any>();
   const pagination = {
     clickable: true,
@@ -60,23 +80,53 @@ const Testimonials = ({}: TestimonialsProps) => {
             <SwiperSlide>
               <div className={`${style.tabs_content} ${style.item1}`}>
                 <div className={style.tabs_content__image}>
-                  <Image src={woman} alt={"A woman smiling"} />
+                  <iframe
+                    src="https://www.youtube.com/embed/jqHbroucyQY"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
                 </div>
-                <div className={style.tabs_content__text}>
-                  <h3>
-                    <TextApp labelID="treatments.option1.label" />
-                  </h3>
-                  <p>
-                    <TextApp labelID="treatments.option1.text" />
-                  </p>
-                </div>
+                {renderPatientText(1)}
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className={style.tabs_item2}>tabs2</div>
+              <div className={`${style.tabs_content} ${style.item2}`}>
+                <div className={style.tabs_content__image}>
+                  <iframe
+                    src="https://www.youtube.com/embed/n9GFtefKWN4"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
+                </div>
+                {renderPatientText(2)}
+
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className={style.tabs_item2}>tabs3</div>
+              <div className={`${style.tabs_content} ${style.item3}`}>
+                <div className={style.tabs_content__image}>
+                  <iframe
+                    src="https://www.youtube.com/embed/icBBhqwzoIY"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
+                </div>
+                {renderPatientText(3)}
+
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={`${style.tabs_content} ${style.item4}`}>
+                <div className={style.tabs_content__image}>
+                  <iframe
+                    src="https://www.youtube.com/embed/iu_oOxigxCg"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
+                </div>
+                {renderPatientText(4)}
+
+              </div>
             </SwiperSlide>
           </div>
         </Swiper>

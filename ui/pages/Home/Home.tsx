@@ -12,7 +12,8 @@ import OnlineInformation from "@/components/OnlineInformation";
 import Testimonials from "@/components/Testimonials";
 import Hero from "@/components/Hero";
 import VisualDiseasesTabs from "@/components/VisualDiseasesTabs/VisualDiseasesTabs";
-import doctor from "../../../public/img/home/doctor_carevision.png"
+import doctor from "../../../public/img/home/doctor_carevision.png";
+import InfoBanner from "@/components/InfoBanner";
 
 /**
  * Home page structure component. Includes the SEO header and each of the sections that build the UI of the page
@@ -35,7 +36,8 @@ const Home: NextPage = () => {
             sliderTextList={[
               "home.hero.slider.text1",
               "home.hero.slider.text2",
-              "home.hero.slider.text3"
+              "home.hero.slider.text3",
+              "home.hero.slider.text4"
             ]}
           />
         </section>
@@ -55,21 +57,14 @@ const Home: NextPage = () => {
           <VisualDiseasesTabs />
         </section>
         <section className={style.home_doctor}>
-          <OnlineInformation bgImage={doctor}/>
+          <OnlineInformation bgImage={doctor} />
         </section>
         <section className={style.home_testimonials}>
           <Testimonials />
         </section>
-        <div className={style.home_information}>
-          <div className={style.home_information_content}>
-            <h3>
-              <TextApp labelID="home.information.text" />
-            </h3>
-            <div>
-              <ButtonApp labelID="loginNow.button.label" onClick={() => console.log("hola")} />
-            </div>
-          </div>
-        </div>
+        <section className={style.home_infoBanner}>
+          <InfoBanner titleLabelID="home.bannerInfo.title" textLabelID="home.bannerInfo.text" />
+        </section>
       </main>
     </div>
   );

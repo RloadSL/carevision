@@ -76,7 +76,7 @@ const VisualDiseasesTabs = () => {
                   <ul>
                     <TextApp labelID={`visualDiseases.option1.text.list`} />
                     <ButtonApp
-                      labelID="learnMore.button.label"
+                      labelID="forTreatment.button.label"
                       onClick={() => console.log("hola")}
                       icon={arrow}
                       iconAlign="right"
@@ -95,7 +95,7 @@ const VisualDiseasesTabs = () => {
                   <ul>
                     <TextApp labelID={`visualDiseases.option2.text.list`} />
                     <ButtonApp
-                      labelID="learnMore.button.label"
+                      labelID="forTreatment.button.label"
                       onClick={() => console.log("hola")}
                       icon={arrow}
                       iconAlign="right"
@@ -114,7 +114,7 @@ const VisualDiseasesTabs = () => {
                   <ul>
                     <TextApp labelID={`visualDiseases.option3.text.list`} />
                     <ButtonApp
-                      labelID="learnMore.button.label"
+                      labelID="forTreatment.button.label"
                       onClick={() => console.log("hola")}
                       icon={arrow}
                       iconAlign="right"

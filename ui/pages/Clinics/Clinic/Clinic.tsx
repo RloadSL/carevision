@@ -11,6 +11,7 @@ import Steps from "@/components/Steps";
 import ImpressionsSlider from "@/components/ImpressionsSlider";
 import SEOHeader from "@/components/SEOHeader/SEOHeader";
 import { useRouter } from "next/router";
+import InfoBanner from "@/components/InfoBanner";
 
 
 const Clinics: NextPage = (props: any) => {
@@ -55,23 +56,10 @@ const Clinics: NextPage = (props: any) => {
           <ImpressionsSlider textData={props.clinic[query.clinic as string]} />
         </section>
       </main>
-
       <section className={style.clinic_testimonials}>
         <Testimonials />
       </section>
-      <div className={style.clinic_information}>
-        <div className={style.clinic_information_content}>
-          <h3>
-            <TextApp labelID="infoBanner.title" textData={props.clinic[query.clinic as string]} />
-          </h3>
-          <p>
-            <TextApp labelID="infoBanner.description" textData={props.clinic[query.clinic as string]} />
-          </p>
-          <div>
-            <ButtonApp labelID="loginNow.button.label" onClick={() => console.log("hola")} />
-          </div>
-        </div>
-      </div>
+     <InfoBanner titleLabelID="home.bannerInfo.title" textLabelID="home.bannerInfo.text"/>
     </div>
   );
 };

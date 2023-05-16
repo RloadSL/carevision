@@ -6,13 +6,15 @@
   "phoneNumber.button.label": "0800 8888 474",
   "loginNow.button.label": "Jetzt anmelden",
   "learnMore.button.label": "Mehr erfahren",
-  "arrangeVideoConsultation.button.label": "Videoberatung vereinbaren",
+  "arrangeVideoConsultation.button.label": "Kostenlose Videoberatung vereinbaren",
   "registerNow.button.label": "Jetzt anmelden",
   "requestInfo.button.label": "Kostenloses Infomaterial anfordern",
   "infoNow.button.label": "Jetzt informieren",
+  "forTreatment.button.label":"Zur Behandlung",
+  
 
   "customerService.submenu.label": "<span>Kostenfreie</span> Servicenummer",
-  "emailContact.submenu.label": "<span>Infos</span> anfordern",
+  "emailContact.submenu.label": "<span>Kostenloses</span> Infopaket",
 
   "home.hero.title":"<span>Home ipsum dolor sit</span> Cras pellentesque",
   "home.hero.price":"602<span>€</span>",
@@ -20,6 +22,8 @@
   "home.hero.slider.text2":"Deutschlandweit vertreten - mehr als 20 Standorte",
   "home.hero.slider.text3":"Augenlasern an nur einem Wochenende",
   "home.hero.slider.text4":"Über 1.000.000 behandelte Augen",
+  "home.bannerInfo.title":"Interessiert an einer Augenlaser-<span>Behandlung in Berlin?</span>",
+  "home.bannerInfo.text":"Gerne beraten wir Sie in einem unverbindlichen Informationsgespräch über das Augenlasern. Vereinbaren Sie Ihren Wunschtermin über die Online-Terminvergabe.",
 
   "iconsSection.title": "<span>Gute Gründe für</span> CARE Vision",
   "iconsSection.text": "Im europaweiten Verbund mit der Clinica Baviera Gruppe verfügen wir über Erfahrung aus 30 Jahren und mehr als 1.000.000 behandelten Augen. Wir wenden ausschließlich moderne Technologien und Behandlungsmethoden an und arbeiten mit erfahrenen und qualifizierten Fachärzten zusammen. Dem Patienten und der Erfüllung seiner Anforderungen widmen wir stets unsere größte Aufmerksamkeit.",
@@ -53,12 +57,12 @@
   "onlineInformation.bubble1": "<h3>Save the Date</h3><p>22.04 18:00 Uhr</p>",
   "onlineInformation.bubble2": "<h3>VideoKonferenz <span>InfoabendAugenlasern</span></h3><p>22.04 18:00 Uhr</p>",
 
-  "testimonials.title":"<span>Vídeo-Slider</span> Pacientes",
-  "testimonials.text":"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse quis leo.",
-  "testimonials.option1.label":"<b>Name</b> Profession",
-  "testimonials.option2.label":"<b>Name</b> Profession",
-  "testimonials.option3.label":"<b>Name</b> Profession",
-  "testimonials.option4.label":"<b>Name</b> Profession",
+  "testimonials.title":"<span>Erfahrungen</span> unserer Patienten",
+  "testimonials.text":"Unsere Patienten erzählen, warum sie sich für CARE Vision entschieden haben, wie sie die Behandlung erlebt haben und berichten über ihre persönlichen Erfahrungen mit ihrem neuen Lebensgefühl ohne Sehhilfe.",
+  "testimonials.option1.label":"<b>Wendla Wiesemeier</b> LASIK-Behandlung",
+  "testimonials.option2.label":"<b>Nadine Jost</b> LASIK-Behandlung",
+  "testimonials.option3.label":"<b>Thomas Elsner</b> LASIK-Behandlung",
+  "testimonials.option4.label":"<b>Natascha Jdanoff</b> PRK/LASEK-Behandlung",
   "testimonials.option5.label":"<b>Name</b> Profession",
   "testimonials.option1.text":"<b>Helena Smith</b><span>Nadadora Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
   "testimonials.option2.text":"<b>Charlie Smith</b><span>Golfista Profesional</span><span>Operada de Astigmatismo y Miopía</span>",
@@ -89,7 +93,7 @@
   "form.name.input.label":"Vorname",
   "form.lastname.input.label":"Nachname",
   "form.phone.input.label":"Telefon",
-  "form.email.input.label":"E-mail",
+  "form.email.input.label":"E-Mail",
   "form.legalCheck.input.label":"He leído y acepto la Política de Privacidad.",
 
   "home.information.text": "<span>Online Infoabend  -</span> Augenlasern"

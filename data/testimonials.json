@@ -1,17 +1,22 @@
 [
   {
-    "name": "Helena Smith",
-    "profession": "Nadadora",
+    "name": "Wendla Wiesemeier",
+    "profession": "LASIK-Behandlung",
     "thumb": "testi_thumb1.png"
   },
   {
-    "name": "Charlie Smith",
-    "profession": "Golfista",
+    "name": "Nadine Jost",
+    "profession": "LASIK-Behandlung",
     "thumb": "testi_thumb2.png"
   },
   {
-    "name": "Carla Smith",
-    "profession": "Atleta",
+    "name": "Thomas Elsner",
+    "profession": "LASIK-Behandlung",
+    "thumb": "testi_thumb1.png"
+  },
+    {
+    "name": "Natascha Jdanoff",
+    "profession": "PRK/LASEK-Behandlung",
     "thumb": "testi_thumb1.png"
   }
 ]

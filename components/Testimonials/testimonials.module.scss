@@ -6,10 +6,19 @@
 .testimonials {
   margin: auto;
 
-  @include devices.device(tablet) {
+  @include devices.device(smScreen) {
     max-width: 90%;
     padding-top: 2rem;
     padding-bottom: 3rem;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 
   &_top {
@@ -39,6 +48,12 @@
       p {
         color: colors.$grey50;
       }
+    }
+
+    &__image {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
     }
   }
 
@@ -72,6 +87,15 @@
 
       @include devices.device(tablet) {
         margin-right: 10px;
+        width: 40px;
+      height: 40px;
+        
+      }
+
+      @include devices.device(smScreen) {
+        margin-right: 10px;
+        width: 57px;
+      height: 60px;
       }
     }
   }

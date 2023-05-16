@@ -101,8 +101,11 @@
 
 		&-pagination {
 			display: flex;
+			margin-bottom: 12px;
 			@include devices.device(tablet) {
 				display: block;
+				width: 35%;
+    		padding-right: 12px;
 			}
 
 			&-bullet-active {
@@ -121,7 +124,7 @@
 					justify-content: left;
 				}
 			}
-			@include devices.device(tablet) {
+			@include devices.device(smScreen) {
 				width: 40% !important;
 				display: flex;
 				flex-direction: column;
@@ -179,4 +182,26 @@
 		opacity: 1 !important;
 		max-width: 1400px !important;
 	}
+}
+
+.mySwiper {
+	flex-direction: column !important;
+
+  .swiper-pagination {
+		margin-bottom: 0;
+		text-align: center;
+
+  &-bullet {
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		background-color: #1367a6;
+		border-radius: 100%;
+		margin-left: 5px;
+
+		&-active {
+			background-color: colors.$palette1;
+		}
+	}
+  }
 }
