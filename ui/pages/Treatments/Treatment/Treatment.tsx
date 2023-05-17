@@ -12,9 +12,11 @@ import Treatments from "@/components/Treatments";
 import OnlineInformation from "@/components/OnlineInformation";
 import Testimonials from "@/components/Testimonials";
 import ButtonApp from "@/components/ButtonApp";
-import doctor from "../../../../public/img/girl_doctor.png"
+import doctor from "../../../../public/img/girl_doctor.png";
 import TreatmentPriceBlock from "./TreatmentPriceBlock";
 import TreatmentSliderBlock from "./TreatmentSliderBlock";
+import treatments from "../../../../data/treatments.json";
+import InfoBanner from "@/components/InfoBanner";
 
 interface TreatmentProps {}
 
@@ -24,7 +26,7 @@ const Treatment: NextPage = (props: any) => {
   //   alert("cambia el texto")
   // }, [props])
   return (
-    <div className={style.treatment}>
+    <div className={`${style.treatment} treatment`}>
       <SEOHeader title="AugenLasern" description="Here the SEO description of the page" />
       <main>
         <section className={style.treatment_hero}>
@@ -40,41 +42,30 @@ const Treatment: NextPage = (props: any) => {
           />
         </section>
         <section className={style.treatment_treatments}>
-          <Treatments />
+          <Treatments textData={treatments["treatment"]} />
         </section>
         <section className={style.treatment_consultation}>
           <VideoConsultation bgImage={videoConsultationBg} />
         </section>
         <section>
-          <TreatmentPriceBlock textData={props.treatment[query.treatment as string]}/>
-          <TreatmentSliderBlock textData={props.treatment[query.treatment as string]}/>
+          <TreatmentPriceBlock textData={props.treatment[query.treatment as string]} />
+          <TreatmentSliderBlock textData={props.treatment[query.treatment as string]} />
         </section>
         <section className={style.treatment_doctor}>
-          <OnlineInformation bgImage={doctor} />
+          <OnlineInformation
+            bgImage={doctor}
+            textLabelID="onlineInformation.description"
+            titleLabelID="onlineInformation.title"
+            textData={props.treatment[query.treatment as string]}
+          />
         </section>
       </main>
       <section className={style.treatment_testimonials}>
         <Testimonials />
       </section>
-      <div className={style.treatment_information}>
-        <div className={style.treatment_information_content}>
-          <h3>
-            <TextApp
-              labelID="infoBanner.title"
-              textData={props.treatment[query.treatment as string]}
-            />
-          </h3>
-          <p>
-            <TextApp
-              labelID="infoBanner.description"
-              textData={props.treatment[query.treatment as string]}
-            />
-          </p>
-          <div>
-            <ButtonApp labelID="loginNow.button.label" onClick={() => console.log("hola")} />
-          </div>
-        </div>
-      </div>
+      <section className={style.treatment_infoBanner}>
+        <InfoBanner titleLabelID="home.bannerInfo.title" textLabelID="home.bannerInfo.text" />
+      </section>
     </div>
   );
 };

@@ -37,6 +37,21 @@
 	}
 }
 
+.treatment {
+	.swiper-pagination-bullet {
+		background: white;
+	}
+}
+
+.home {
+	.treatments {
+		.swiper-pagination-bullet {
+			background: colors.$palette2;
+		}
+	}
+	
+}
+
 .treatments {
 	.swiper-pagination {
 		display: flex;
@@ -52,7 +67,6 @@
 		}
 	}
 	.swiper-pagination-bullet {
-		background: colors.$palette2 !important;
 		border-radius: 100px;
 		color: black;
 		padding: 20px !important;
@@ -94,18 +108,26 @@
 	.swiper {
 		position: relative;
 
-		@include devices.device(tablet) {
+		@include devices.device(smScreen) {
 			flex-direction: row-reverse !important;
 			justify-content: space-between;
+		}
+
+		&-wrapper {
+			width: 100%;
+
+			@include devices.device(smScreen) {
+				width: 75%;
+			}
 		}
 
 		&-pagination {
 			display: flex;
 			margin-bottom: 12px;
-			@include devices.device(tablet) {
+			@include devices.device(smScreen) {
 				display: block;
 				width: 35%;
-    		padding-right: 12px;
+				padding-right: 12px;
 			}
 
 			&-bullet-active {
@@ -115,7 +137,7 @@
 				height: 75px;
 				display: flex;
 				justify-content: center;
-				@include devices.device(tablet) {
+				@include devices.device(smScreen) {
 					border: none;
 					background-color: colors.$palette2;
 					border-radius: 10px;
@@ -125,10 +147,10 @@
 				}
 			}
 			@include devices.device(smScreen) {
-				width: 40% !important;
+				width: 25% !important;
 				display: flex;
 				flex-direction: column;
-				margin-right: 50px;
+				//margin-right: 50px;
 			}
 		}
 
@@ -162,22 +184,16 @@
 			&-bullet-active {
 				background-color: colors.$main !important;
 			}
-
-
 		}
-
 	}
 
-	
-
 	.swiper-slide:not(.swiper-slide-active) {
-		opacity: 0.1 !important;
+		opacity: 0.3 !important;
 		transform: scale(0.9) !important;
 	}
 }
 
 .treatmentSteps {
-
 	.swiper-slide {
 		opacity: 1 !important;
 		max-width: 1400px !important;
@@ -187,21 +203,21 @@
 .mySwiper {
 	flex-direction: column !important;
 
-  .swiper-pagination {
+	.swiper-pagination {
 		margin-bottom: 0;
 		text-align: center;
 
-  &-bullet {
-		width: 10px;
-		height: 10px;
-		display: inline-block;
-		background-color: #1367a6;
-		border-radius: 100%;
-		margin-left: 5px;
+		&-bullet {
+			width: 10px;
+			height: 10px;
+			display: inline-block;
+			background-color: #1367a6;
+			border-radius: 100%;
+			margin-left: 5px;
 
-		&-active {
-			background-color: colors.$palette1;
+			&-active {
+				background-color: colors.$palette1;
+			}
 		}
 	}
-  }
 }

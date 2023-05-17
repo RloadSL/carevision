@@ -24,7 +24,7 @@ const Hero = ({ bgImage, title, textData, sliderTextList }: HeroProps) => {
 
   return (
     <div className={style.hero}>
-      <div aria-hidden={true} className={style.hero_image}></div>
+      <div aria-hidden={true} className={`${style.hero_image} hero-bg`}></div>
       <div className={style.container}>
         <div className={style.hero_info}>
           <div className={style.hero_info__left}>

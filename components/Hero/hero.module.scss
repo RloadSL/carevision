@@ -6,11 +6,11 @@
 .hero {
   background-size: cover;
   background-position: top center;
-  min-height: 90vh;
+  min-height: 65vh;
   position: relative;
   // margin-bottom: 10rem;
   @include devices.device(tablet) {
-    min-height: 70vh;
+    // min-height: 70vh;
   }
 
   @include devices.device(smScreen) {
@@ -33,17 +33,17 @@
   }
 
   &_image {
-    height: 70vh;
-    background: url(../../public/img/home/hero_sm.jpg) no-repeat #d3dce5;
-    background-position: center 25%;
-    background-size: cover;
+    height: 50vh;
+    //background: url(../../public/img/home/hero_sm.jpg) no-repeat #d3dce5;
+    // background-position: center 25%;
+    // background-size: cover;
 
 
     @include devices.device(tablet) {
       height: 45vh;
-      background: url(../../public/img/home/hero.jpg) no-repeat #d3dce5;
-      background-position: center 25%;
-      background-size: cover;
+      // background: url(../../public/img/home/hero.jpg) no-repeat #d3dce5;
+      // background-position: center 25%;
+      // background-size: cover;
     }
 
     @include devices.device(smScreen) {

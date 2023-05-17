@@ -10,21 +10,28 @@
   @include devices.device(tablet) {
     padding: 0;
     padding-top: 3rem;
-    padding-bottom: 3rem
+    padding-bottom: 3rem;
   }
 
   .title {
     @extend %mainTitle;
     max-width: 550px;
-    margin: auto
+    margin: auto;
   }
 
   .centeredContainer {
     @extend %mainLayout;
     text-align: center;
 
+    .buttonContainer {
+      button {
+        max-width: 420px !important;
+      }
+    }
+
     button {
       margin: auto;
+      margin-top: 2rem;
     }
   }
 
@@ -41,31 +48,126 @@
     }
 
     &__text {
-      width: 45%;
+      width: 100%;
+      flex-direction: column-reverse;
+
+      @include devices.device(tablet) {
+        flex-direction: row;
+        width: 45%;
+      }
+
+      h3 {
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+
+        @include devices.device(tablet) {
+          color: colors.$palette1;
+        }
+      }
+
+      p {
+        color: white;
+
+        @include devices.device(tablet) {
+          color: colors.$main;
+        }
+      }
     }
   }
 }
 
 .step1 {
+  background: url(../../../../../public/img/augenlasern/step1_bg.jpg);
+  background-size: cover;
+
+  .slide_content__text {
+    &::before {
+      content: "1." !important;
+    }
+  }
+}
+
+.step2 {
+  background: url(../../../../../public/img/augenlasern/step2_bg.jpg);
+  background-size: cover;
+  .slide_content__text {
+    &::before {
+      content: "2." !important;
+    }
+  }
+}
+
+.step3 {
+  background: url(../../../../../public/img/augenlasern/step3_bg.jpg);
+  background-size: cover;
+  .slide_content__text {
+    &::before {
+      content: "3." !important;
+    }
+  }
+}
+
+.step1,
+.step2,
+.step3 {
+  padding: 20px;
+  @include devices.device(tablet) {
+    padding: 0px;
+    background: none;
+  }
   .slide_content__text {
     display: flex;
     justify-content: space-between;
     div {
-      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
+      @include devices.device(tablet) {
+        width: 60%;
+
+      }
     }
     &::before {
       @extend %beforeAfter;
-      content: "1.";
-      width: 30%;
-      color: colors.$main;
-      font-size: 10rem;
+      width: 100%;
+      font-size: 6rem;
       font-weight: lighter;
       height: auto;
       margin-top: -5%;
-      margin-left: 5%;
+      text-align: right;
+      color: white;
+
+      @include devices.device(tablet) {
+        width: 30%;
+        text-align: left;
+        color: colors.$main;
+        margin-left: 5%;
+        font-size: 10rem;
+
+
+      }
+    }
+  }
+}
+
+.slider {
+  &_navigation {
+    button {
+      background: url(../../../../../public/img/icons/arrow_icon_b.svg) no-repeat;
+      background-position: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      border: 1px solid colors.$palette1;
+    }
+
+    &__next {
+      margin-right: 10px !important;
+    }
+    &__prev {
+      transform: rotate(180deg);
     }
   }
 }

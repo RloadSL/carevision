@@ -10,10 +10,18 @@ import useComponentUtils from "@/ui/hooks/component.hooks";
 interface OnlineInformationProps {
   bgImage?: any;
   textData?: any;
+  titleLabelID: string;
+  textLabelID: string;
 }
 
-const OnlineInformation = ({ bgImage, textData }: OnlineInformationProps) => {
+const OnlineInformation = ({
+  bgImage,
+  textData,
+  titleLabelID,
+  textLabelID
+}: OnlineInformationProps) => {
   const { useWindowSize } = useComponentUtils();
+  console.log(textData);
 
   //checking mobile
   const isMobile = useWindowSize().width <= 768 ? true : false;
@@ -23,30 +31,29 @@ const OnlineInformation = ({ bgImage, textData }: OnlineInformationProps) => {
       <div className={style.onlineInformation_image}>
         {isMobile && (
           <h2>
-            <TextApp labelID="onlineInformation.title" />
+            <TextApp labelID={titleLabelID} />
           </h2>
         )}
-        <div className={`${style.onlineInformation_image__bubble} ${style.bubble1}`}>
+        <div className={`${style.onlineInformation_image__bubble} ${style.bubble1} bubble`}>
           <p className={style.title}>Save the date</p>
           <p>22.04 18:00 Uhr</p>
         </div>
-        <div className={`${style.onlineInformation_image__bubble} ${style.bubble2}`}>
-          <p  className={style.title}>InfoabendAugenlasern</p>
+        <div className={`${style.onlineInformation_image__bubble} ${style.bubble2} bubble`}>
+          <p className={style.title}>InfoabendAugenlasern</p>
           <p>Mit Mohamad Bdoura, fachart fur augenheilkinde</p>
         </div>
         <div className={style.onlineInformation_image__doctor}>
-        <Image src={bgImage} alt={"Doctor Mohamad Bdoura"} />
-
+          <Image src={bgImage} alt={"Doctor Mohamad Bdoura"} />
         </div>
       </div>
       <div className={style.onlineInformation_text}>
         {!isMobile && (
           <h2>
-            <TextApp labelID="onlineInformation.title" />
+            <TextApp labelID={titleLabelID} textData={textData}/>
           </h2>
         )}
         <div>
-          <TextApp labelID="onlineInformation.text" />
+          <TextApp labelID={textLabelID} textData={textData}/>
         </div>
         <ButtonApp
           icon={arrow}

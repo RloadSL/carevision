@@ -23,26 +23,26 @@ const Testimonials = ({}: TestimonialsProps) => {
   //checking mobile
   const isMobile = useWindowSize().width <= 768 ? true : false;
 
-  const renderPatientText = (option:number) => {
-    if(isMobile) {
+  const renderPatientText = (option: number) => {
+    if (isMobile) {
       return (
         <div className={style.tabs_content__text}>
-        <h3>
-          <TextApp labelID={`treatments.option${option}.label`} />
-        </h3>
-        <p>
-          <TextApp labelID={`treatments.option${option}.text`} />
-        </p>
-      </div>
-      )
+          <h3>
+            <TextApp labelID={`treatments.option${option}.label`} />
+          </h3>
+          <p>
+            <TextApp labelID={`treatments.option${option}.text`} />
+          </p>
+        </div>
+      );
     }
-  }
+  };
   const [swiper, setSwiper] = useState<any>();
   const pagination = {
     clickable: true,
     renderBullet: (index: number, className: any) => {
       return `<div class="${className} ${style.tabs_button}">
-          <div style="background-image:url(/testimonials/${testimonials[index].thumb})" aria-hidden="true" class="${style.tabs_button__image}">
+          <div style="background-image:url(/testimonials/${testimonials[index].thumb})" aria-hidden="true" class="${style.tabs_button__thumb}">
           </div>
           <div class="${style.tabs_button__text}">
             <span>${testimonials[index].name}</span>
@@ -79,53 +79,54 @@ const Testimonials = ({}: TestimonialsProps) => {
           <div className={style.tabs}>
             <SwiperSlide>
               <div className={`${style.tabs_content} ${style.item1}`}>
-                <div className={style.tabs_content__image}>
+                <div className={`${style.tabs_content__image} videoPlayer`}>
                   <iframe
+                    className="videoPlayer_iframe"
                     src="https://www.youtube.com/embed/jqHbroucyQY"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  ></iframe>
+                  />
                 </div>
                 {renderPatientText(1)}
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className={`${style.tabs_content} ${style.item2}`}>
-                <div className={style.tabs_content__image}>
+                <div className={`${style.tabs_content__image} videoPlayer`}>
                   <iframe
+                    className="videoPlayer_iframe"
                     src="https://www.youtube.com/embed/n9GFtefKWN4"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   ></iframe>
                 </div>
                 {renderPatientText(2)}
-
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className={`${style.tabs_content} ${style.item3}`}>
-                <div className={style.tabs_content__image}>
+                <div className={`${style.tabs_content__image} videoPlayer`}>
                   <iframe
+                    className="videoPlayer_iframe"
                     src="https://www.youtube.com/embed/icBBhqwzoIY"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   ></iframe>
                 </div>
                 {renderPatientText(3)}
-
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className={`${style.tabs_content} ${style.item4}`}>
-                <div className={style.tabs_content__image}>
+                <div className={`${style.tabs_content__image} videoPlayer`}>
                   <iframe
+                    className="videoPlayer_iframe"
                     src="https://www.youtube.com/embed/iu_oOxigxCg"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   ></iframe>
                 </div>
                 {renderPatientText(4)}
-
               </div>
             </SwiperSlide>
           </div>

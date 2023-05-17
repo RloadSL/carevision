@@ -14,6 +14,7 @@ import Hero from "@/components/Hero";
 import VisualDiseasesTabs from "@/components/VisualDiseasesTabs/VisualDiseasesTabs";
 import doctor from "../../../public/img/home/doctor_carevision.png";
 import InfoBanner from "@/components/InfoBanner";
+import treatments from "../../../data/treatments.json"
 
 /**
  * Home page structure component. Includes the SEO header and each of the sections that build the UI of the page
@@ -26,7 +27,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className={style.home}>
+    <div className={`${style.home} home`}>
       <SEOHeader title="CareVision" description="Here the SEO description of the page" />
       <main>
         <section className={style.home_hero}>
@@ -48,7 +49,7 @@ const Home: NextPage = () => {
           <VideoBlock />
         </section>
         <section className={style.home_treatments}>
-          <Treatments />
+          <Treatments textData={treatments['home']}/>
         </section>
         <section className={style.home_consultation}>
           <VideoConsultation />
@@ -57,7 +58,7 @@ const Home: NextPage = () => {
           <VisualDiseasesTabs />
         </section>
         <section className={style.home_doctor}>
-          <OnlineInformation bgImage={doctor} />
+          <OnlineInformation bgImage={doctor} titleLabelID='home.onlineInformation.title' textLabelID="home.onlineInformation.text"/>
         </section>
         <section className={style.home_testimonials}>
           <Testimonials />

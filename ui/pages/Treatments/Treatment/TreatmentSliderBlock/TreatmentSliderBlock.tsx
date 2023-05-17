@@ -9,6 +9,7 @@ import step2 from "../../../../../public/img/augenlasern/step2.jpg";
 import step3 from "../../../../../public/img/augenlasern/step3.jpg";
 import Image from "next/image";
 import useComponentUtils from "@/ui/hooks/component.hooks";
+import arrow from "../../../../../public/img/icons/arrow_icon.svg";
 
 interface TreatmentSliderBlockProps {
   textData?: string;
@@ -19,46 +20,38 @@ const TreatmentSliderBlock = ({ textData }: TreatmentSliderBlockProps) => {
 
   //checking device width
   const windowWidth = useWindowSize().width;
-  const deviceWidth = windowWidth >= 768 && windowWidth <= 1500 ? 'mediumDevice' : windowWidth < 768 ? 'smallDevice' : 'bigDevice'
-     
-  console.log(deviceWidth)
+  const deviceWidth =
+    windowWidth >= 768 && windowWidth <= 1500
+      ? "mediumDevice"
+      : windowWidth < 768
+      ? "smallDevice"
+      : "bigDevice";
+
+  console.log(deviceWidth);
 
   const [swiper, setSwiper] = useState<any>();
-  const pagination = {
-    clickable: true,
-    // bulletClass: "bullet",
-    // renderBullet: (index: number, className: any) => {
-    //   return `<div aria-hidden=true class="${className} ${style.bullet}"></div>`;
-    // }
-  };
   return (
     <div className={style.treatmentSliderBlock}>
       <div className={style.centeredContainer}>
         <article className={style.iconsSection_top}>
           <h2 className={style.title}>
-          <TextApp labelID="treatmentSlider.title" textData={textData}/>
+            <TextApp labelID="treatmentSlider.title" textData={textData} />
           </h2>
           <p>
-          <TextApp labelID="treatmentSlider.description" textData={textData}/>
+            <TextApp labelID="treatmentSlider.description" textData={textData} />
           </p>
         </article>
       </div>
-      <div className={style.slider_navigation}>
-        <button className={style.slider_navigation__next} onClick={() => swiper.slideNext()}>
-          <span className="only-readers">Next slide</span>
-        </button>
-        <button className={style.slider_navigation__prev} onClick={() => swiper.slidePrev()}>
-          <span className="only-readers">Previous slide</span>
-        </button>
-      </div>
+
       <Swiper
         className="treatmentSteps"
-        spaceBetween={20}
-        slidesPerView={deviceWidth === 'bigDevice' ? 1.65 : deviceWidth === 'mediumDevice' ? 1.2 : 1}
+        spaceBetween={50}
+        slidesPerView={
+          deviceWidth === "bigDevice" ? 1.65 : deviceWidth === "mediumDevice" ? 1.2 : 1
+        }
         centeredSlides
-        pagination={pagination}
+        pagination={{ clickable: true }}
         onSwiper={(swiper) => {
-          console.log(swiper);
           setSwiper(swiper);
         }}
         onSlideChange={() => console.log("slide change")}
@@ -72,29 +65,68 @@ const TreatmentSliderBlock = ({ textData }: TreatmentSliderBlockProps) => {
             <div className={style.slide_content__text}>
               <div>
                 <h3>
-                  <TextApp labelID="treatments.option1.label" />
+                  <TextApp labelID="treatmentSlider.option1.title" textData={textData} />
                 </h3>
                 <p>
-                  <TextApp labelID="treatments.option1.text" />
+                  <TextApp labelID="treatmentSlider.option1.description" textData={textData} />
                 </p>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={style.tabs_item2}>tabs2</div>
+          <div className={`${style.slide_content} ${style.step2}`}>
+            <div className={style.slide_content__image}>
+              <Image src={step2} alt={""} />
+            </div>
+            <div className={style.slide_content__text}>
+              <div>
+                <h3>
+                  <TextApp labelID="treatmentSlider.option2.title" textData={textData} />
+                </h3>
+                <p>
+                  <TextApp labelID="treatmentSlider.option2.description" textData={textData} />
+                </p>
+              </div>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={style.tabs_item2}>tabs3</div>
+          <div className={`${style.slide_content} ${style.step3}`}>
+            <div className={style.slide_content__image}>
+              <Image src={step3} alt={""} />
+            </div>
+            <div className={style.slide_content__text}>
+              <div>
+                <h3>
+                  <TextApp labelID="treatmentSlider.option3.title" textData={textData} />
+                </h3>
+                <p>
+                  <TextApp labelID="treatmentSlider.option3.description" textData={textData} />
+                </p>
+              </div>
+            </div>
+          </div>
         </SwiperSlide>
       </Swiper>
+
       <div className={style.centeredContainer}>
-        <ButtonApp
-          labelID="learnMore.button.label"
-          onClick={() => console.log("hola")}
-          icon={""}
-          iconAlign="right"
-        />
+        <div className={style.slider_navigation}>
+          <button className={style.slider_navigation__next} onClick={() => swiper.slideNext()}>
+            <span className="only-readers">Next slide</span>
+          </button>
+          <button className={style.slider_navigation__prev} onClick={() => swiper.slidePrev()}>
+            <span className="only-readers">Previous slide</span>
+          </button>
+        </div>
+        <div className={style.buttonContainer}>
+          <ButtonApp
+            labelID="moreAboutTreatment.button.label"
+            onClick={() => console.log("hola")}
+            icon={arrow}
+            iconAlign="right"
+          />
+        </div>
       </div>
     </div>
   );

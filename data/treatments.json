@@ -1,0 +1,39 @@
+{
+  "home": {
+    "title": "Behandlungen",
+    "options": [
+      {
+        "label":"Augenlasern",
+        "text": "Kurzsichtigkeit, Weitsichtigkeit sowie Hornhautverkrümmung können durch eine Augenlaserbehandlung korrigiert werden.",
+        "imgSrc": "/img/home/woman.jpg"
+      },
+      {
+        "label":"Gut sehen ab 50",
+        "text": "Die Alterssichtigkeit kann mit Multifokallinsen sehr gut behandelt werden. Auch eine zusätzlich vorhandene Kurz- oder Weitsichtigkeit sowie Hornhautverkrümmung kann mitkorrigiert werden.",
+        "imgSrc": "/img/home/old_woman.jpg"
+      },
+      {
+        "label":"Grauer Star Behandlung",
+        "text": "Moderne Premiumlinsen, die Multifokallinsen, ermöglichen dem Patienten weitgehendst ein Leben ohne Brille. Denn diese Art der künstlichen Linsen sorgt dank mehrerer Brennpunkte für ein Sehen auf allen Distanzen – im Nah-, Zwischen- und Fernbereich.",
+        "imgSrc": "/img/home/man.jpg"
+
+      }
+    ]
+  },
+  "treatment": {
+    "title": "<span>Augenlaserbehandlungen</span> im Überblick",
+    "options": [
+      {
+        "label":"Lasik",
+        "text": "Eine Augenlaserbehandlung mit der LASEK Methode verläuft ähnlich wie bei der LASIK. Der Unterschied besteht lediglich darin, dass der Augenarzt auf den Einschnitt in die Hornhaut verzichtet. Die oberste Zellschicht der Hornhaut, das sogenannte Epithel, wird abgelöst.",
+        "list":"<li>In der Ferne sehe ich unscharf</li><li>Meine Dioptrien liegen im Minusbereich</li><li>Eine Augenlaserkorrektur kann eine Kurzsichtigkeit von -1 bis zu -10 Dioptrien ausgleichen.</li>",
+        "videoSrc": "https://www.youtube.com/embed/ObR7UlrILu4"
+      },
+      {
+        "label":"PRK / Lasek",
+        "text": "Die Alterssichtigkeit kann mit Multifokallinsen sehr gut behandelt werden. Auch eine zusätzlich vorhandene Kurz- oder Weitsichtigkeit sowie Hornhautverkrümmung kann mitkorrigiert werden.",
+        "videoSrc": "https://www.youtube.com/embed/ObR7UlrILu4"
+      }
+    ]
+  }
+}

@@ -4,6 +4,7 @@
 @use '../../../../assets/styles/partials/variables/colors' as colors;
 
 .treatment {
+  
   &_testimonials {
     @extend %mainLayout;
     background-color: colors.$grey20;
@@ -13,6 +14,16 @@
     margin: 6rem auto;
     background-color: colors.$palette2;
     padding-top: 2rem;
+
+    h3 {
+      display: none
+    }
+
+    ul {
+      li{
+        display: block
+      }
+    }
   }
 
   &_information {

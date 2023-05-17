@@ -37,7 +37,7 @@ const VideoConsultation = ({ bgImage = peopleRunning }: VideoConsultationProps) 
         <div className={style.videoConsultation_text_list}>
           <TextApp labelID="videoConsultation.text.list" />
         </div>
-        <div>
+        <div className={style.buttonContainer}>
           <ButtonApp
             labelID="arrangeVideoConsultation.button.label"
             onClick={() => console.log("hola")}

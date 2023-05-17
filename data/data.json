@@ -11,8 +11,9 @@
   "requestInfo.button.label": "Kostenloses Infomaterial anfordern",
   "infoNow.button.label": "Jetzt informieren",
   "forTreatment.button.label":"Zur Behandlung",
+  "moreAboutTreatment.button.label":"Mehr uber das Behandlungsverharen",
+  "getHelpNow.button.label":"Jetzt beraten lassen",
   
-
   "customerService.submenu.label": "<span>Kostenfreie</span> Servicenummer",
   "emailContact.submenu.label": "<span>Kostenloses</span> Infopaket",
 
@@ -24,7 +25,11 @@
   "home.hero.slider.text4":"Über 1.000.000 behandelte Augen",
   "home.bannerInfo.title":"Interessiert an einer Augenlaser-<span>Behandlung in Berlin?</span>",
   "home.bannerInfo.text":"Gerne beraten wir Sie in einem unverbindlichen Informationsgespräch über das Augenlasern. Vereinbaren Sie Ihren Wunschtermin über die Online-Terminvergabe.",
-
+  "home.onlineInformation.title": "<span>Online Infoabend</span> - Augenlasern",
+  "home.onlineInformation.text": "<p>Ihr erster Schritt Richtung Freiheit von der Brille!</p><p>Nehmen Sie an unserem Online-Infoabend per Videoschalte teil und stellen Sie alle Ihre Fragen rund um das Thema Augenlasern.</p><p>CARE Vision Arzt Mohamad Bdoura informiert umfassend uber das Thema Augenlasern - kostenlos und unverbindlich.</p>",
+  "home.onlineInformation.bubble1": "<h3>Save the Date</h3><p>22.04 18:00 Uhr</p>",
+  "home.onlineInformation.bubble2": "<h3>VideoKonferenz <span>InfoabendAugenlasern</span></h3><p>22.04 18:00 Uhr</p>",
+  
   "iconsSection.title": "<span>Gute Gründe für</span> CARE Vision",
   "iconsSection.text": "Im europaweiten Verbund mit der Clinica Baviera Gruppe verfügen wir über Erfahrung aus 30 Jahren und mehr als 1.000.000 behandelten Augen. Wir wenden ausschließlich moderne Technologien und Behandlungsmethoden an und arbeiten mit erfahrenen und qualifizierten Fachärzten zusammen. Dem Patienten und der Erfüllung seiner Anforderungen widmen wir stets unsere größte Aufmerksamkeit.",
   "iconsSection.option1.title": "<b>Mehr als 1.000.000</b> behandelte Augen",
@@ -44,18 +49,7 @@
   "videoConsultation.text.p": "Vereinbaren Sie Ihre persönliche Videoberatung und stellen Sie uns Ihre Fragen über das Augenlasern und Linsenbehandlungen.",
   "videoConsultation.text.list": "<span>Das sind die Vorteile:</span><ul><li>Wir informieren Sie umfassend über Augenlaser- und Linsenbehandlungen</li><li>Kostenlos und unverbindlich</li><li>Mit einem Klick zugänglich von jedem Gerät, bequem von zu Hause aus</li><li>Schnell und einfach – ganz ohne Wartezeit und Anfahrt</li></ul>",
 
-  "treatments.title": "Behandlungen",
-  "treatments.option1.label": "Augenlasern",
-  "treatments.option2.label": "Gut sehen ab 50",
-  "treatments.option3.label": "Grauer Star Behandlung",
-  "treatments.option1.text": "Kurzsichtigkeit, Weitsichtigkeit sowie Hornhautverkrümmung können durch eine Augenlaserbehandlung korrigiert werden.",
-  "treatments.option2.text": "Die Alterssichtigkeit kann mit Multifokallinsen sehr gut behandelt werden. Auch eine zusätzlich vorhandene Kurz- oder Weitsichtigkeit sowie Hornhautverkrümmung kann mitkorrigiert werden.",
-  "treatments.option3.text": "Moderne Premiumlinsen, die Multifokallinsen, ermöglichen dem Patienten weitgehendst ein Leben ohne Brille. Denn diese Art der künstlichen Linsen sorgt dank mehrerer Brennpunkte für ein Sehen auf allen Distanzen – im Nah-, Zwischen- und Fernbereich.",
 
-  "onlineInformation.title": "<span>Online Infoabend</span> - Augenlasern",
-  "onlineInformation.text": "<p>Ihr erster Schritt Richtung Freiheit von der Brille!</p><p>Nehmen Sie an unserem Online-Infoabend per Videoschalte teil und stellen Sie alle Ihre Fragen rund um das Thema Augenlasern.</p><p>CARE Vision Arzt Mohamad Bdoura informiert umfassend uber das Thema Augenlasern - kostenlos und unverbindlich.</p>",
-  "onlineInformation.bubble1": "<h3>Save the Date</h3><p>22.04 18:00 Uhr</p>",
-  "onlineInformation.bubble2": "<h3>VideoKonferenz <span>InfoabendAugenlasern</span></h3><p>22.04 18:00 Uhr</p>",
 
   "testimonials.title":"<span>Erfahrungen</span> unserer Patienten",
   "testimonials.text":"Unsere Patienten erzählen, warum sie sich für CARE Vision entschieden haben, wie sie die Behandlung erlebt haben und berichten über ihre persönlichen Erfahrungen mit ihrem neuen Lebensgefühl ohne Sehhilfe.",

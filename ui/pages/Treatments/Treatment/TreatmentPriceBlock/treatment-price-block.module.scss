@@ -22,23 +22,43 @@
   .content {
     display: flex;
     align-items: center;
+    flex-direction: column;
     max-width: 90%;
     margin: auto;
-    margin-left: 10%;
     position: relative;
 
+    @include devices.device(tablet) {
+      flex-direction: row;
+      margin-left: 10%;
+    }
+
     &_image {
-      width: 60%;
+      width: 90%;
+
+      @include devices.device(tablet) {
+        width: 60%;
+      }
     }
 
     &_text {
-      width: 35%;
+      width: 90%;
       background-color: white;
-      position: absolute;
-      left: 40%;
       border-radius: 20px;
       padding: 2rem;
       box-shadow: rgba(0, 153, 217, 0.2) 0px 3px 30px 0px;
+      margin-top: -40%;
+
+      @include devices.device(tablet) {
+        left: 40%;
+        width: 50%;
+        position: absolute;
+        margin: 0;
+      }
+
+      @include devices.device(smScreen) {
+        width: 35%;
+
+      }
 
       &::after {
         @extend %beforeAfter;

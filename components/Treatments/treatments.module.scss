@@ -18,7 +18,7 @@
     margin-top: 2rem;
     padding: 20px;
     min-height: 400px;
-  
+
     @include devices.device(tablet) {
       background: none !important;
       padding: 0 !important;
@@ -47,6 +47,25 @@
         }
       }
 
+      ul {
+        li {
+          color: colors.$main;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          
+
+          &::before {
+            @extend %beforeAfter;
+            background: url(../../public/img/icons/check_list.svg) no-repeat;
+            width: 35px;
+            height: 35px;
+            flex-shrink: 0;
+            margin-right: 12px;
+          }
+        }
+      }
+
       @include devices.device(tablet) {
         width: 30%;
         display: flex;
@@ -57,7 +76,7 @@
       }
 
       h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
         margin-top: 0px;
       }
@@ -76,19 +95,23 @@
   @extend %mainTitle;
   text-align: center;
   margin-bottom: 3rem;
+
+  span {
+    display: block;
+  }
 }
 
 .item1 {
-  background-image: url(../../public/img/treatments_tab1.jpg);
+  background-image: url(../../public/img/home/treatments_tab1.jpg);
   background-size: cover;
 }
 
 .item2 {
-  background-image: url(../../public/img/treatments_tab2.jpg);
+  background-image: url(../../public/img/home/treatments_tab2.jpg);
   background-size: cover;
 }
 
 .item3 {
-  background-image: url(../../public/img/treatments_tab3.jpg);
+  background-image: url(../../public/img/home/treatments_tab3.jpg);
   background-size: cover;
 }

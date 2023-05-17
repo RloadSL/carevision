@@ -18,7 +18,7 @@ const Clinics: NextPage = (props: any) => {
   const { query } = useRouter();
 
   return (
-    <div className={style.clinic}>
+    <div className={`${style.clinic} clinic`}>
       <SEOHeader title="CareVision" description="Here the SEO description of the page" />
       <main>
         <section className={style.clinic_hero}>

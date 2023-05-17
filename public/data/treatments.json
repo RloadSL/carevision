@@ -6,7 +6,13 @@
     "treatmentSlider.title":"<span>Augen lasern: Behandlug und Ablauf der </span>Augenlaser OP",
     "treatmentSlider.description":"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse quis leo.",
     "treatmentSlider.option1.title":"Voruntersuchung",
-    "treatmentSlider.option1.description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricie"
+    "treatmentSlider.option1.description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricie",
+    "treatmentSlider.option2.title":"Tag der Behandlung",
+    "treatmentSlider.option2.description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricie",
+    "treatmentSlider.option3.title":"Nach dem Augenlasern",
+    "treatmentSlider.option3.description":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricie",
+    "onlineInformation.title":"<span>Sind Sie fur eine</span> Augenlaserkorrektur geeignet?",
+    "onlineInformation.description":"<ul><li>Sie tragen eine Brille oder Kontaktlinsen</li><li>Sie sind 18 Jahre oder älter</li><li>Ihre Sehstärke ist stabil</li><li>Sie befinden sich in einer guten gesundheitlichen Verfassung</li><li>Es liegen keine Augenkrankheiten vor</li></ul><p>Machen Sie den nächsten Schritt und vereinbaren Sie eine kostenlose und unverbindliche Videoberatung.</p>"
   },
   "linsenimplantation": {
     "title": "lisenimplantation"

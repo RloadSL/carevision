@@ -102,7 +102,7 @@
         }
 
         @include devices.device(smScreen) {
-          left: 15%;
+          left: 13%;
         }
 
         &::before {
@@ -162,9 +162,28 @@
     }
     @include devices.device(smScreen) {
       padding-left: 5%;
-      width: 30%;
+      width: 40%;
       text-align: left;
     }
+
+    ul {
+      color: colors.$main;
+      li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          @extend %beforeAfter;
+          background: url(../../public/img/icons/check_list2.svg) no-repeat center;
+          width: 35px;
+          height: 35px;
+          flex-shrink: 0;
+          margin-right: 12px;
+        }
+      }
+    }
+
     button {
       margin: auto;
 
