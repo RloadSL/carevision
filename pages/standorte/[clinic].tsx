@@ -6,7 +6,7 @@ export default Clinic;
 export async function getServerSideProps(context:any) {
   const {params} = context 
   try {
-    const response = await HTTP.get(`http://localhost:3000/data/standorte/standorte.json`)
+    const response = await HTTP.get(`https://carevision.vercel.app/data/standorte/standorte.json`)
     return {props:{clinic:response}}
   } catch (error) {
     return {
