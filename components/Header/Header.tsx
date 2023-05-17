@@ -47,7 +47,14 @@ const Header = ({ displayModal }: HeaderProps) => {
 
   return (
     <div className={`${style.header} ${style[isMobile ? "mobile" : "pc"]} navigation`}>
-      <button className={style.fixedButton} style={useScrollDistance() > 400 ? {transform:'translateX(-100px)'} : {transform:'translateX(0px)'}}>
+      <button
+        className={style.fixedButton}
+        style={
+          useScrollDistance() > 400
+            ? { transform: "translateX(-100px)" }
+            : { transform: "translateX(0px)" }
+        }
+      >
         online termin
       </button>
       <header>
@@ -73,9 +80,7 @@ const Header = ({ displayModal }: HeaderProps) => {
           </div>
 
           {isMobile && (
-            // <button className={style.mobileButton} onClick={toggleMobileNav}>
-            <button className={style.mobileButton} onClick={()=>console.log('click')}>
-
+            <button className={style.mobileButton} onClick={toggleMobileNav}>
               <span className="only-readers">menu</span>
             </button>
           )}
@@ -83,16 +88,21 @@ const Header = ({ displayModal }: HeaderProps) => {
         <div className={style.header_bottom}>
           <nav className={`${style.menu} sidemenu`}>
             {isMobile && (
-              <button className={style.closeButton} onClick={toggleMobileNav}>
-                <span className="only-readers">menu</span>
-              </button>
+              <>
+                <div className={style.menu_logo}>
+                  <Image src={logoMobile} alt={"CareVision logo"} />
+                </div>
+                <button className={style.closeButton} onClick={toggleMobileNav}>
+                  <span className="only-readers">menu</span>
+                </button>
+              </>
             )}
             <ul>
               {menuData.map((item, index: number) => {
                 return (
                   <li className={`${style.header_menu__item} li-menu`} key={index}>
                     <Link href={`${item.url}`} onClick={toggleMobileNav}>
-                        <span>{item.label}</span>
+                      <span>{item.label}</span>
                     </Link>
                   </li>
                 );
