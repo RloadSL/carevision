@@ -66,6 +66,7 @@
   &_testimonials {
     @extend %mainLayout;
     background-color: colors.$grey20;
+    border-radius: 12px
   }
 
   &_infoBanner {
