@@ -112,11 +112,11 @@ const TreatmentSliderBlock = ({ textData }: TreatmentSliderBlockProps) => {
 
       <div className={style.centeredContainer}>
         <div className={style.slider_navigation}>
-          <button className={style.slider_navigation__next} onClick={() => swiper.slideNext()}>
-            <span className="only-readers">Next slide</span>
-          </button>
           <button className={style.slider_navigation__prev} onClick={() => swiper.slidePrev()}>
             <span className="only-readers">Previous slide</span>
+          </button>
+          <button className={style.slider_navigation__next} onClick={() => swiper.slideNext()}>
+            <span className="only-readers">Next slide</span>
           </button>
         </div>
         <div className={style.buttonContainer}>

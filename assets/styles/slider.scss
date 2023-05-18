@@ -34,6 +34,11 @@
 .visualDiseases {
 	.swiper-pagination {
 		text-align: center;
+
+		&-bullet-active {
+			background-color: colors.$palette1 !important;
+			color: white;
+		}
 	}
 }
 
