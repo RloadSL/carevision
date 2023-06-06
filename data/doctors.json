@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Aleksandar Cirkovic",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/cirkovic.jpg"
+  },
+  {
+    "name": "Chrysanthi Papadopoulou",
+    "position": "lorem",
+    "imgSrc":"/img/doctors/papadopoulou3.jpg"
+
+  },
+  {
+    "name": "Bader Khayat",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/khayat.jpg"
+  },
+  {
+    "name": "Erik Wölfel",
+    "position": "lipsum",
+    "imgSrc":"/img/doctors/wolfel.jpg"
+  },
+  {
+    "name": "Gudrun Kemmerling",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/kemmerling.jpg"
+  },
+  {
+    "name": "Garegin Sukiasyan",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/sukiasyan.jpg"
+  },
+  {
+    "name": "Julia Esser",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/esser.jpg"
+  },
+  {
+    "name": "Robert Wagner",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/wagner.jpg"
+  },  {
+    "name": "Ulrich Michael Klemen",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/klemen.jpg"
+  },
+  {
+    "name": "Raquel Socías",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/socias.jpg"
+  },
+  {
+    "name": "Toam Katz",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/katz.jpg"
+  },
+  {
+    "name": "Petrys Kulisiewicz",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/kulisiewicz.jpg"
+  },
+  {
+    "name": "Stephan Linke",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/linke.jpg"
+  },
+  {
+    "name": "Stephan Gruber",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/gruber.jpg"
+  },
+  {
+    "name": "Yara Khaddour",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/khaddour.jpg"
+  },
+  {
+    "name": "Stefan Kaschik",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/kaschik.jpg"
+  },
+  {
+    "name": "Dr RMeiller",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/rmeiller.jpg"
+  },
+  {
+    "name": "lorem ipsum",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/lorem.jpg"
+  },
+  {
+    "name": "Serge Sjapic",
+    "position": "Dr. Med",
+    "imgSrc":"/img/doctors/sjapic.jpg"
+  }
+]
