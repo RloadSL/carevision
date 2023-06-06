@@ -303,3 +303,18 @@ canvas {
     }
 	}
 }
+
+.doctors {
+	.hero-bg {
+    background: url(../../public/img/doctors/hero.jpg) no-repeat #d3dce5 ;
+		background-position: center 25%;
+    background-size: cover;
+
+
+    @include devices.device(tablet) {
+      background: url(../../public/img/doctors/hero.jpg) no-repeat #d3dce5;
+			background-position: center 25%;
+      background-size: cover;
+    }
+	}
+}
