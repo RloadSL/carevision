@@ -23,7 +23,7 @@ class Http {
     return response.data;
   }
 
-  post = async (url: string, body: any = {}, headers: any = {}): Promise<{ errCode?: string, data?: any }> => {
+  post = async (url: string, body: any = {}, headers: any = {}): Promise<any> => {
     try {
       headers = { ...this._headers, ...headers };
       const response = await axios.post(url, body, { headers: headers })
@@ -31,9 +31,7 @@ class Http {
     } catch (error) {
       const err = error as any;
       console.log(err)
-      const code: any = err.response.data?.code;
-      console.log(err)
-      return { errCode: code }
+      return {err}
     }
   }
 
