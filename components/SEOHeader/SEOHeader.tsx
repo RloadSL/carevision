@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import TextApp from "../TextApp";
 
 interface SEOHeaderProps {
   title: string;
@@ -13,9 +14,12 @@ SEO component that allows you to define both the title and the description of th
  */
 
 const SEOHeader = ({ title, description }: SEOHeaderProps) => {
+  console.log('aqui',title)
   return (
     <Head>
-      <title>{title}</title>
+      <title>
+        {title}
+      </title>
       <meta name="description" content={description} />
     </Head>
   );

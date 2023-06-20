@@ -13,13 +13,15 @@ import SEOHeader from "@/components/SEOHeader/SEOHeader";
 import { useRouter } from "next/router";
 import InfoBanner from "@/components/InfoBanner";
 
-
 const Clinics: NextPage = (props: any) => {
   const { query } = useRouter();
 
   return (
     <div className={`${style.clinic} clinic`}>
-      <SEOHeader title="CareVision" description="Here the SEO description of the page" />
+      <SEOHeader
+        title={props.clinic[query.clinic as string].metaTitle}
+        description={props.clinic[query.clinic as string].metaDescription}
+      />
       <main>
         <section className={style.clinic_hero}>
           <Hero
@@ -59,7 +61,7 @@ const Clinics: NextPage = (props: any) => {
       <section className={style.clinic_testimonials}>
         <Testimonials />
       </section>
-     <InfoBanner titleLabelID="home.bannerInfo.title" textLabelID="home.bannerInfo.text"/>
+      <InfoBanner titleLabelID="home.bannerInfo.title" textLabelID="home.bannerInfo.text" />
     </div>
   );
 };
