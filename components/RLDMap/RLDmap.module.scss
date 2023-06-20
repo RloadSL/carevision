@@ -1,0 +1,11 @@
+@use '../../assets/styles/partials/placeholders' as placeholders;
+@use '../../assets/styles/partials/mixins/devices' as devices;
+@use '../../assets/styles/partials/mixins/layout' as layout;
+@use '../../assets/styles/partials/variables/colors' as colors;
+
+.map {
+  background: url(../../public/img/standorte/map.svg) no-repeat;
+  background-size: contain;
+  height: 600px;
+  width: 400px;
+}
