@@ -32,7 +32,8 @@ const validationSchema = Yup.object().shape({
   firstname: Yup.string().required('Firstname is required'),
   lastname: Yup.string().required('Lastname is required'),
   phone: Yup.string().required('Phone is required'),
-  email: Yup.string().email('Invalid email').required('Email is required')
+  email: Yup.string().email('Invalid email').required('Email is required'),
+  privacy: Yup.boolean().required('Field is required')
 })
 
 interface ContactFormProps {
@@ -50,7 +51,7 @@ const ContactForm = ({ onSubmitted }: ContactFormProps) => {
 
   return (
     <Formik
-      initialValues={{ firstname: '', lastname: '', email: '', phone: '' }}
+      initialValues={{ firstname: '', lastname: '', email: '', phone: '', privacy: '' }}
       validationSchema={validationSchema}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         sendForm(values).then((result) => {
@@ -91,16 +92,17 @@ const ContactForm = ({ onSubmitted }: ContactFormProps) => {
             <div className={`${style.contactForm_inputs_container}`}>
               <InputFormikApp
                 labelID='form.email.input.label'
-                type='email'
+                type='text'
                 name='email'
               />
             </div>
           </div>
-          {/* <div>
-            <InputCheckFormikApp>
-              texto del label
+          <div>
+            <InputCheckFormikApp 
+                name='privacy'>
+               <p> Políticas de privacidad</p>
               </InputCheckFormikApp>
-          </div> */}
+          </div>
           {!loadin ? (
             <ButtonApp
               labelID='requestInfo.button.label'
